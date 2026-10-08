@@ -52,7 +52,6 @@ custom_fields:
   - English: en
   - Deutsch: de
   default: en
-
 name: Impossible Geometry
 description: Optical illusions for e-paper.
 refresh_interval: 60
