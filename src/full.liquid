@@ -1,0 +1,14 @@
+<div class="layout layout--col layout--top gap--small lg:gap--medium">
+  <div class="flex flex--row flex--between flex--center-y w--full shrink-0 border--h-10 pb--small">
+    <span class="label label--small lg:label--base">{{ selected.kind | default: 'OPTICAL STUDY' | escape }}</span>
+    <span class="label label--small lg:label--base">{{ selected.number | default: '01' }} / 06</span>
+  </div>
+  <div class="ig-art">{{ geometry_art }}</div>
+  <div class="flex flex--col flex--center gap--xsmall shrink-0 w--full text--center">
+    <span class="title title--large lg:title--xxlarge" data-clamp="1">{{ selected.title | default: 'Closed Circuit' | escape }}</span>
+    {% if show_note == 'yes' and selected.note %}
+      <span class="description description--small lg:description--large" data-clamp="2">{{ selected.note | escape }}</span>
+    {% endif %}
+  </div>
+</div>
+<div class="title_bar"><span class="title flex flex--row flex--center-y gap--xsmall">{{ geometry_mark }} Impossible Geometry</span><span class="instance">OPTICAL STUDIES</span></div>
