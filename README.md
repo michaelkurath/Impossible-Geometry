@@ -1,12 +1,12 @@
 # Impossible Geometry
 
-A minimal geometric art plugin for [TRMNL](https://trmnl.com/): ten simple optical constructions in black, white and sparse hatching.
+A minimal geometric art plugin for [TRMNL](https://trmnl.com/): thirteen simple optical constructions in black, white and sparse hatching.
 
 ![OG full-screen preview](previews/og-full-penrose-triangle-en-no.png)
 
 The artwork is embedded SVG. It needs no image hosting, polling API, credentials or saved state. The complete artwork is preserved in Full, Half Horizontal, Half Vertical and Quadrant layouts on OG and X. Captions default off; English and German are available.
 
-The collection includes Penrose Triangle, Impossible Cube, Impossible Trident, Reversible Cubes, Kanizsa Triangle, Necker Cube, Reversible Steps, Impossible Square, Impossible Colonnade and Penrose Staircase. Daily rotation is the default; hourly rotation and fixed selection are also available. Physical-device testing is still pending.
+The collection includes Penrose Triangle, Impossible Cube, Impossible Trident, Reversible Cubes, Kanizsa Triangle, Necker Cube, Reversible Steps, Impossible Square, Impossible Colonnade, Penrose Staircase, Impossible Joinery, Block Triangle and Impossible Hexnut. Daily rotation is the default; hourly rotation and fixed selection are also available. Physical-device testing is still pending.
 
 ## Install
 
@@ -19,7 +19,7 @@ Use `src/settings.yml`, the four layout files, `shared.liquid` and `transform.js
 | Setting | Values | Default |
 | --- | --- | --- |
 | Rotation | `daily`, `hourly`, `fixed` | `daily` |
-| Artwork (fixed mode) | ten catalogue IDs | `penrose-triangle` |
+| Artwork (fixed mode) | thirteen catalogue IDs | `penrose-triangle` |
 | Time zone (daily mode) | IANA time zone | `Europe/Zurich` |
 | Language | `en`, `de` | `en` |
 | Show explanation | `yes`, `no` | `no` |

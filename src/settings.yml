@@ -36,7 +36,7 @@ custom_fields:
   name: About Impossible Geometry
   field_type: author_bio
   category: art
-  description: Ten geometric illusions with bold black, white and hatched faces. Embedded vector artwork; no external API or image hosting required.
+  description: Thirteen geometric illusions with bold black, white and hatched faces. Embedded vector artwork; no external API or image hosting required.
 - keyname: rotation
   name: Artwork rotation
   field_type: select
@@ -60,6 +60,9 @@ custom_fields:
   - Impossible Square: impossible-square
   - Impossible Colonnade: impossible-colonnade
   - Penrose Staircase: penrose-staircase
+  - Impossible Joinery: impossible-joinery
+  - Block Triangle: block-triangle
+  - Impossible Hexnut: impossible-hexnut
   default: penrose-triangle
   optional: true
   description: Used when Artwork rotation is Fixed artwork.

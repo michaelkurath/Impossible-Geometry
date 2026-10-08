@@ -194,7 +194,68 @@ function impossibleColonnade(label) {
   body+=long(2,5);
   return wrap(body,label,'15 15 560 455');
 }
-const renderers={'penrose-triangle':triangle,'impossible-cube':impossibleCube,'impossible-trident':trident,'reversible-cubes':cubes,'kanizsa-triangle':kanizsaTriangle,'necker-cube':neckerCube,'reversible-steps':reversibleSteps,'impossible-square':impossibleSquare,'impossible-colonnade':impossibleColonnade,'penrose-staircase':penroseStaircase};
+// Four beams with reversed attachment order at the two uprights. Shared
+// endpoints preserve ordinary joints; the rail ends exchange front/rear depth.
+function impossibleJoinery(label) {
+  const leftFront=[[80,130],[112,148],[112,438],[80,420]];
+  const leftSide=[[112,148],[146,128],[146,418],[112,438]];
+  const leftTop=[[80,130],[114,110],[146,128],[112,148]];
+  const rightFront=[[446,116],[478,134],[478,424],[446,406]];
+  const rightSide=[[478,134],[512,114],[512,404],[478,424]];
+  const rightTop=[[446,116],[480,96],[512,114],[478,134]];
+  // One rail slopes up, the other down. Their depth attachments reverse at
+  // the far upright, rather than forming an ordinary crossed-brace frame.
+  const risingFront=[[80,392],[80,368],[478,138],[478,162]];
+  const risingTop=[[80,368],[114,348],[512,118],[478,138]];
+  const fallingFront=[[112,172],[112,196],[478,408],[478,384]];
+  const fallingTop=[[112,172],[146,152],[512,364],[478,384]];
+  let body=shadedPolygon(rightFront)+polygon(rightSide,'#000')+polygon(rightTop,'#fff');
+  body+=shadedPolygon(risingFront)+polygon(risingTop,'#fff')+polygon([[478,138],[512,118],[512,142],[478,162]],'#000');
+  body+=shadedPolygon(leftFront)+polygon(leftSide,'#000')+polygon(leftTop,'#fff');
+  body+=shadedPolygon(fallingFront)+polygon(fallingTop,'#fff');
+  body+=polygon([[478,384],[512,364],[512,388],[478,408]],'#000');
+  return wrap(body,label,'45 60 535 415');
+}
+
+function blockTriangle(label) {
+  // Nine separate cubes: four vertices along each side, with corners shared.
+  // A 60-degree lattice keeps every cube and every intervening gap regular.
+  const step=100,dy=step/Math.sqrt(3),r=43,q=r/Math.sqrt(3),height=2*q;
+  const apex=[390,80],left=[90,80+3*dy],bottom=[390,80+6*dy];
+  const centres=[];
+  for(const [a,b] of [[apex,left],[left,bottom],[bottom,apex]])
+    for(let i=0;i<3;i++)centres.push([a[0]+(b[0]-a[0])*i/3,a[1]+(b[1]-a[1])*i/3]);
+  let body='';
+  for(const [x,y] of centres){
+    const top=[x,y-q],l=[x-r,y],f=[x,y+q],right=[x+r,y];
+    body+=polygon([top,right,f,l],'#fff');
+    body+=shadedPolygon([l,f,[x,y+q+height],[x-r,y+height]],12,1.8);
+    body+=polygon([f,right,[x+r,y+height],[x,y+q+height]],'#000');
+  }
+  return wrap(body,label,'25 30 450 505');
+}
+
+function impossibleHexnut(label) {
+  // New hexagon proportions and four bore curves on the conventional
+  // ambihelical graph. The bore returns to a different outer face at each end.
+  const a=[135,65],b=[200,30],c=[465,200],e=[440,665],f=[375,700],g=[110,525];
+  const j=[405,235],k=[165,495];
+  const path=(d,fill)=>`<path d="${d}" fill="${fill}" stroke="#000" stroke-width="3" stroke-linejoin="round"/>`;
+  const insideLeft='C135 215 170 465 350 525';
+  const insideRightReverse='C460 440 360 185 210 190';
+  const outsideRightReverse='C490 575 475 435 450 365 C430 310 420 275 405 235';
+  // The black return is a single face that continues from the outside right
+  // edge to the inside left edge. It must not be split into a normal nut wall.
+  let body=path('M465 200 L555 485 L440 665 L165 495 C150 440 120 365 115 300 C110 225 130 165 210 190 '+insideLeft+' '+outsideRightReverse+' Z','#000');
+  body+=path('M135 65 L20 245 L110 525 L165 495 C150 440 120 365 115 300 C110 225 130 165 210 190 C360 185 460 440 350 525 '+outsideRightReverse+' Z','#fff');
+  // Open bore: the two arcs share exact endpoints, with no extra loop or seam.
+  body+=path('M210 190 '+insideLeft+' '+insideRightReverse+' Z','#fff');
+  body+=polygon([a,b,c,j],'#fff');
+  body+=shadedPolygon([g,k,e,f],14,2);
+  return wrap(body,label,'-15 -5 605 740');
+}
+
+const renderers={'penrose-triangle':triangle,'impossible-cube':impossibleCube,'impossible-trident':trident,'reversible-cubes':cubes,'kanizsa-triangle':kanizsaTriangle,'necker-cube':neckerCube,'reversible-steps':reversibleSteps,'impossible-square':impossibleSquare,'impossible-colonnade':impossibleColonnade,'penrose-staircase':penroseStaircase,'impossible-joinery':impossibleJoinery,'block-triangle':blockTriangle,'impossible-hexnut':impossibleHexnut};
 function svg(id,label) {return renderers[id](label);}
 function build(check=false){
   if(!catalogue.length||new Set(catalogue.map(x=>x.id)).size!==catalogue.length)throw Error('Empty or duplicate catalogue');
