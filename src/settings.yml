@@ -36,7 +36,7 @@ custom_fields:
   name: About Impossible Geometry
   field_type: author_bio
   category: art
-  description: Four geometric illusions with bold black, white and hatched faces. Embedded vector artwork; no external API or image hosting required.
+  description: Seven geometric illusions with bold black, white and hatched faces. Embedded vector artwork; no external API or image hosting required.
 - keyname: rotation
   name: Artwork rotation
   field_type: select
@@ -54,6 +54,9 @@ custom_fields:
   - Impossible Cube: impossible-cube
   - Impossible Trident: impossible-trident
   - Reversible Cubes: reversible-cubes
+  - Kanizsa Triangle: kanizsa-triangle
+  - Necker Cube: necker-cube
+  - Reversible Steps: reversible-steps
   default: penrose-triangle
   optional: true
   description: Used when Artwork rotation is Fixed artwork.

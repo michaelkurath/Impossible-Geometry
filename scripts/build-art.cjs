@@ -40,25 +40,39 @@ function triangle(label='Penrose triangle') {
 const catalogue=JSON.parse(fs.readFileSync(path.join(root,'data/artworks.json'),'utf8'));
 function wrap(body,label,viewBox='0 0 600 540') {return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${label}">${body}</svg>\n`;}
 function polygon(p,fill) {return `<polygon points="${points(p)}" fill="${fill}" stroke="#000" stroke-width="3" stroke-linejoin="round"/>`;}
+// Artwork coordinates are kept in a small, display-independent plane.
+const cubeRegions={
+  front:[
+    [[3,43],[74,60],[74,33],[87,27],[87,12],[174,32],[154,43],[151,43],[87,27],[87,129],[172,149],[174,151],[155,160],[149,160],[117,152],[117,204],[4,177]],
+    [[17,62],[17,164],[104,185],[104,148],[87,145],[87,129],[74,126],[74,76]],
+    [[175,58],[188,52],[188,153],[175,150]],
+    [[97,65],[117,70],[117,129],[104,126],[104,83],[97,81]],
+  ],
+  side:[
+    [[118,70],[197,32],[197,164],[120,203],[118,203],[118,152],[127,154],[127,184],[189,153],[189,94],[188,52],[185,52],[127,81],[127,131],[119,130]],
+    [[87,28],[96,30],[96,124],[89,128],[87,119]],
+    [[17,63],[25,64],[25,160],[19,163],[17,163]],
+    [[28,159],[87,130],[87,145],[49,164]],
+    [[27,41],[86,12],[87,27],[49,46]],
+  ],
+  top:[
+    [[4,42],[82,3],[197,30],[118,70],[97,65],[97,58],[115,62],[160,39],[174,32],[159,28],[86,11],[26,41],[73,52],[74,59],[18,47]],
+    [[88,128],[98,124],[125,132],[174,142],[175,150],[188,154],[130,183],[127,183],[127,173],[174,150],[89,130]],
+    [[18,163],[24,160],[30,160],[103,177],[104,185],[19,165]],
+    [[26,149],[72,126],[86,129],[28,159],[26,159]],
+  ],
+};
 function impossibleCube(label) {
-  // Front and rear square frames share four exact diagonal depth rails. The
-  // rear-left upright crosses over the near top edge, while the near-right
-  // upright hides the rear bottom edge: an impossible ordering of depth.
-  const surface=(coords,hatched=false)=>polygon(coords,'#fff')+(hatched?`<path d="${hatch(coords,13)}" fill="none" stroke="#000" stroke-width="2"/>`:'');
-  let body='<path d="M240 65H500V325H240Z M270 95V295H470V95Z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="3"/>';
-  const rearRight=[[470,65],[500,65],[500,325],[470,325]];
-  body+=surface(rearRight,true);
-  for(const [index,coords] of [
-    [[103,176],[240,65],[270,65],[133,176]],
-    [[327,176],[470,65],[500,65],[357,176]],
-    [[103,424],[240,325],[270,325],[133,424]],
-    [[327,424],[470,325],[500,325],[357,424]]
-  ].entries())body+=surface(coords,index===1||index===3);
-  body+='<path d="M100 170H360V430H100Z M130 200V400H330V200Z" fill="#000" fill-rule="evenodd"/>';
-  body+='<rect x="240" y="65" width="30" height="260" fill="#000"/>';
-  const leftFacet=[[270,65],[288,65],[288,325],[270,325]];
-  body+=surface(leftFacet,true);
-  return wrap(body,label,'55 20 490 450');
+  // Face boundaries follow one consistent three-beam junction. The diagonal
+  // rail terminates at the left side of the recessed rear upright.
+  const fill=(p,color)=>`<polygon points="${points(p)}" fill="${color}" stroke="#000" stroke-width="1.1" stroke-linejoin="round"/>`;
+  const shaded=p=>fill(p,'#fff')+`<path d="${hatch(p,5)}" fill="none" stroke="#000" stroke-width="0.7"/>`;
+  const [front,hole,...islands]=cubeRegions.front;
+  let body=shaded(front)+fill(hole,'#fff');
+  body+=islands.map(shaded).join('');
+  body+=cubeRegions.side.map(p=>fill(p,'#000')).join('');
+  body+=cubeRegions.top.map(p=>fill(p,'#fff')).join('');
+  return wrap(body,label,'-13 -10 226 230');
 }
 
 function trident(label) {
@@ -80,13 +94,48 @@ function cubes(label) {
   }
   return wrap(body,label,'75 50 450 440');
 }
-const renderers={'penrose-triangle':triangle,'impossible-cube':impossibleCube,'impossible-trident':trident,'reversible-cubes':cubes};
+function kanizsaTriangle(label) {
+  const pacman=(cx,cy,direction,r=68)=>{
+    const start=(direction+30)*Math.PI/180,end=(direction-30)*Math.PI/180;
+    const at=a=>[n(cx+r*Math.cos(a)),n(cy+r*Math.sin(a))];
+    return `<path d="M${cx} ${cy}L${at(start).join(' ')}A${r} ${r} 0 1 1 ${at(end).join(' ')}Z" fill="#000"/>`;
+  };
+  const body=pacman(300,86,90)+pacman(95,424,-30)+pacman(505,424,210);
+  return wrap(body,label,'15 0 570 510');
+}
+function neckerCube(label) {
+  const f=[[90,155],[350,155],[350,415],[90,415]],rear=f.map(([x,y])=>[x+150,y-105]);
+  const line=(a,b)=>`<path d="M${a.join(' ')}L${b.join(' ')}"/>`;
+  let body='<g fill="none" stroke="#000" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">';
+  body+=`<polygon points="${points(f)}"/><polygon points="${points(rear)}"/>`;
+  for(let i=0;i<4;i++)body+=line(f[i],rear[i]);
+  body+='</g>';
+  return wrap(body,label,'50 20 510 445');
+}
+function reversibleSteps(label) {
+  const stepWidth=78,depth=[38,-27],rise=48;
+  let body='';
+  for(let i=0;i<5;i++){
+    const x=70+i*stepWidth,y=365-i*rise;
+    const left=[x,y],right=[x+stepWidth,y+14];
+    const backRight=[right[0]+depth[0],right[1]+depth[1]],backLeft=[left[0]+depth[0],left[1]+depth[1]];
+    const tread=[left,right,backRight,backLeft];
+    body+=polygon(tread,'#fff');
+    if(i%2===0)body+=`<path d="${hatch(tread,14)}" fill="none" stroke="#000" stroke-width="2"/>`;
+    if(i<4){
+      const riser=[right,backRight,[backRight[0],backRight[1]-rise-14],[right[0],right[1]-rise-14]];
+      body+=polygon(riser,'#fff');
+    }
+  }
+  return wrap(body,label,'40 70 520 390');
+}
+const renderers={'penrose-triangle':triangle,'impossible-cube':impossibleCube,'impossible-trident':trident,'reversible-cubes':cubes,'kanizsa-triangle':kanizsaTriangle,'necker-cube':neckerCube,'reversible-steps':reversibleSteps};
 function svg(id,label) {return renderers[id](label);}
 function build(check=false){
   if(!catalogue.length||new Set(catalogue.map(x=>x.id)).size!==catalogue.length)throw Error('Empty or duplicate catalogue');
   for(const entry of catalogue)if(!renderers[entry.id])throw Error('Missing artwork '+entry.id);
   const write=(file,contents)=>{if(check){if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==contents)throw Error('Generated file out of date: '+file);}else fs.writeFileSync(file,contents);};
-  const metadata=["{% assign artwork_id = selected_entry.id | default: 'penrose-triangle' %}","{% case artwork_id %}"];
+  const metadata=[`{% assign artwork_total = '${String(catalogue.length).padStart(2,'0')}' %}`,"{% assign artwork_id = selected_entry.id | default: 'penrose-triangle' %}","{% case artwork_id %}"];
   const art=['{% case artwork_id %}'];
   for(const [index,entry] of catalogue.entries()){
     const condition=index===0?'{% else %}':`{% when '${entry.id}' %}`;

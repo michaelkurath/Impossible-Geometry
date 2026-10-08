@@ -31,6 +31,30 @@ const CATALOGUE = [
     "note": "Raised blocks or recessed corners? Let the depth reverse.",
     "note_de": "Würfel oder Vertiefungen? Lass die räumliche Wahrnehmung kippen.",
     "kind": "depth reversal"
+  },
+  {
+    "id": "kanizsa-triangle",
+    "title": "Kanizsa Triangle",
+    "title_de": "Kanizsa-Dreieck",
+    "note": "The bright triangle has no drawn edges. Your eye supplies them.",
+    "note_de": "Die helle Dreiecksfläche hat keine gezeichneten Kanten. Das Auge ergänzt sie.",
+    "kind": "illusory contour"
+  },
+  {
+    "id": "necker-cube",
+    "title": "Necker Cube",
+    "title_de": "Necker-Würfel",
+    "note": "Which square is in front? The wireframe flips as you look.",
+    "note_de": "Welches Quadrat liegt vorne? Das Drahtbild kippt beim Betrachten.",
+    "kind": "depth reversal"
+  },
+  {
+    "id": "reversible-steps",
+    "title": "Reversible Steps",
+    "title_de": "Kippende Stufen",
+    "note": "The same edges can rise toward you or recede into the page.",
+    "note_de": "Dieselben Kanten können auf dich zu steigen oder in die Fläche zurückfallen.",
+    "kind": "depth reversal"
   }
 ];
 // END GENERATED CATALOGUE
