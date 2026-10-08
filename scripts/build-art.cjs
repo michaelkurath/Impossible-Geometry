@@ -129,7 +129,72 @@ function reversibleSteps(label) {
   }
   return wrap(body,label,'40 70 520 390');
 }
-const renderers={'penrose-triangle':triangle,'impossible-cube':impossibleCube,'impossible-trident':trident,'reversible-cubes':cubes,'kanizsa-triangle':kanizsaTriangle,'necker-cube':neckerCube,'reversible-steps':reversibleSteps};
+function shadedPolygon(p, pitch=14, width=2) {
+  return polygon(p,'#fff')+`<path d="${hatch(p,pitch)}" fill="none" stroke="#000" stroke-width="${width}"/>`;
+}
+function impossibleSquare(label) {
+  // Sharp four-bar: the continuous front band changes depth at the inner
+  // corners. All corner coordinates share three nested square boundaries.
+  const front=[[60,100],[100,60],[100,400],[360,400],[360,160],[420,100],[420,460],[60,460]];
+  const light=[[100,60],[460,60],[460,420],[420,460],[420,100],[160,100],[160,340],[100,400]];
+  const upper=[[160,100],[420,100],[360,160],[160,160]];
+  const lower=[[100,400],[160,340],[360,340],[360,400]];
+  return wrap(shadedPolygon(front)+polygon(light,'#fff')+polygon(upper,'#000')+polygon(lower,'#fff'),label,'25 25 470 470');
+}
+
+// Conventional Penrose staircase topology, adapted from Philip Ronan /
+// Sakurambo's public-domain Impossible staircase.svg. Coordinates use exact
+// shared endpoints; the slight differences in the reference are regularized.
+function penroseStaircase(label) {
+  const a=37,b=18;
+  const diamond=(x,y)=>[[x,y],[x+a,y-b],[x+2*a,y],[x+a,y+b]];
+  const leftWall=[[20,159],[20,86],[57,104],[57,96],[94,114],[94,106],[131,124],[131,116],[168,134],[168,126],[205,144],[205,136],[242,154],[242,266]];
+  const rightWall=[[353,86],[316,104],[316,111],[279,129],[279,136],[242,154],[242,266],[353,212]];
+  const innerLeft=[[279,36],[242,54],[242,46],[205,64],[205,56],[168,74],[168,66],[131,84],[131,76],[94,94],[94,171],[242,171],[242,66],[279,48]];
+  const innerRight=[[316,104],[279,86],[279,79],[242,61],[242,171],[279,171],[279,96],[316,114]];
+  let body='';
+  body+=polygon(diamond(205,36),'#fff');
+  for(let i=0;i<5;i++)body+=polygon(diamond(20+i*a,86-i*10),'#fff');
+  body+=polygon(innerLeft,'#000');
+  body+=polygon(diamond(242,61),'#fff');
+  body+=polygon([[279,79],[316,61],[316,68],[279,86]],'#000');
+  body+=shadedPolygon(innerRight,10,1.5);
+  for(let i=0;i<5;i++)body+=polygon(diamond(57+i*a,96+i*10),'#fff');
+  body+=polygon(diamond(242,111),'#fff');
+  body+=polygon(diamond(279,86),'#fff');
+  body+=polygon(rightWall,'#000');
+  body+=shadedPolygon(leftWall,12,1.6);
+  body+=shadedPolygon([[242,111],[279,129],[279,136],[242,118]],10,1.5);
+  return wrap(body,label,'0 0 375 285');
+}
+
+function impossibleColonnade(label) {
+  // A regular six-pillar frame with one contradictory crossing. The middle
+  // rear pillar passes in front of the upper near rail, but terminates on
+  // the rear lower rail. Each joint is drawn as an ordinary square beam.
+  const project=([x,y,z])=>[160+47.5*x-50*y,430-12.5*x-12.5*y-50*z];
+  const box=([x,y,z],[dx,dy,dz])=>{
+    const p=(a,b,c)=>project([a,b,c]);
+    const top=[p(x,y,z+dz),p(x+dx,y,z+dz),p(x+dx,y+dy,z+dz),p(x,y+dy,z+dz)];
+    const front=[p(x,y,z),p(x+dx,y,z),p(x+dx,y,z+dz),p(x,y,z+dz)];
+    const side=[p(x,y,z),p(x,y+dy,z),p(x,y+dy,z+dz),p(x,y,z+dz)];
+    return shadedPolygon(front,12,1.6)+polygon(side,'#000')+polygon(top,'#fff');
+  };
+  const w=.4;
+  const long=(y,z)=>box([0,y,z],[8+w,w,.32]);
+  const short=(x,z)=>box([x,0,z],[w,2+w,.32]);
+  const post=(x,y)=>box([x,y,0],[w,w,5]);
+  let body=long(2,-.32)+short(8,-.32)+short(0,-.32);
+  body+=post(8,2)+post(0,2);
+  body+=long(2,5)+short(8,5)+short(0,5);
+  body+=long(0,-.32)+post(8,0)+post(4,0)+post(0,0);
+  body+=long(0,5);
+  // Deliberate depth reversal, not a disconnected or floating beam.
+  body+=post(4,2);
+  body+=long(2,5);
+  return wrap(body,label,'15 15 560 455');
+}
+const renderers={'penrose-triangle':triangle,'impossible-cube':impossibleCube,'impossible-trident':trident,'reversible-cubes':cubes,'kanizsa-triangle':kanizsaTriangle,'necker-cube':neckerCube,'reversible-steps':reversibleSteps,'impossible-square':impossibleSquare,'impossible-colonnade':impossibleColonnade,'penrose-staircase':penroseStaircase};
 function svg(id,label) {return renderers[id](label);}
 function build(check=false){
   if(!catalogue.length||new Set(catalogue.map(x=>x.id)).size!==catalogue.length)throw Error('Empty or duplicate catalogue');

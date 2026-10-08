@@ -54,5 +54,29 @@
     "note": "The same edges can rise toward you or recede into the page.",
     "note_de": "Dieselben Kanten können auf dich zu steigen oder in die Fläche zurückfallen.",
     "kind": "depth reversal"
+  },
+  {
+    "id": "impossible-square",
+    "title": "Impossible Square",
+    "title_de": "Unmögliches Quadrat",
+    "note": "Four solid beams change depth as you follow the frame.",
+    "note_de": "Vier massive Balken wechseln ihre Tiefe, wenn du dem Rahmen folgst.",
+    "kind": "impossible object"
+  },
+  {
+    "id": "impossible-colonnade",
+    "title": "Impossible Colonnade",
+    "title_de": "Unmögliche Kolonnade",
+    "note": "A rear pillar passes in front of the upper beam. Follow it down.",
+    "note_de": "Eine hintere Säule läuft vor dem oberen Balken. Folge ihr nach unten.",
+    "kind": "impossible object"
+  },
+  {
+    "id": "penrose-staircase",
+    "title": "Penrose Staircase",
+    "title_de": "Penrose-Treppe",
+    "note": "Every flight climbs, yet the staircase returns to its beginning.",
+    "note_de": "Jeder Treppenlauf steigt an. Trotzdem endet die Treppe an ihrem Anfang.",
+    "kind": "impossible object"
   }
 ]

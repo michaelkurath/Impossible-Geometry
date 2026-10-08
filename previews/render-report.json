@@ -196,6 +196,90 @@
     "failures": []
   },
   {
+    "name": "og-full-impossible-square-en-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-impossible-square-en-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-impossible-square-de-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-impossible-square-de-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-impossible-colonnade-en-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-impossible-colonnade-en-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-impossible-colonnade-de-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-impossible-colonnade-de-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-penrose-staircase-en-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-penrose-staircase-en-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-penrose-staircase-de-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-penrose-staircase-de-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
     "name": "og-half_horizontal-penrose-triangle-en-yes",
     "width": 780,
     "height": 225,
@@ -386,6 +470,90 @@
   },
   {
     "name": "og-half_horizontal-reversible-steps-de-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-square-en-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-square-en-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-square-de-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-square-de-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-colonnade-en-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-colonnade-en-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-colonnade-de-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-impossible-colonnade-de-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-penrose-staircase-en-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-penrose-staircase-en-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-penrose-staircase-de-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-penrose-staircase-de-no",
     "width": 780,
     "height": 225,
     "artHeight": 173,
@@ -588,6 +756,90 @@
     "failures": []
   },
   {
+    "name": "og-half_vertical-impossible-square-en-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 389,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-impossible-square-en-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-impossible-square-de-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-impossible-square-de-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-impossible-colonnade-en-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-impossible-colonnade-en-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-impossible-colonnade-de-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-impossible-colonnade-de-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-penrose-staircase-en-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 389,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-penrose-staircase-en-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-penrose-staircase-de-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-penrose-staircase-de-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
     "name": "og-quadrant-penrose-triangle-en-yes",
     "width": 385,
     "height": 225,
@@ -778,6 +1030,90 @@
   },
   {
     "name": "og-quadrant-reversible-steps-de-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-square-en-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-square-en-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-square-de-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-square-de-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-colonnade-en-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-colonnade-en-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-colonnade-de-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-impossible-colonnade-de-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-penrose-staircase-en-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-penrose-staircase-en-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-penrose-staircase-de-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-penrose-staircase-de-no",
     "width": 385,
     "height": 225,
     "artHeight": 173,
@@ -980,6 +1316,90 @@
     "failures": []
   },
   {
+    "name": "x-full-impossible-square-en-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-impossible-square-en-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-impossible-square-de-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-impossible-square-de-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-impossible-colonnade-en-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-impossible-colonnade-en-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-impossible-colonnade-de-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-impossible-colonnade-de-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-penrose-staircase-en-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-penrose-staircase-en-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-penrose-staircase-de-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-penrose-staircase-de-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
     "name": "x-half_horizontal-penrose-triangle-en-yes",
     "width": 1836,
     "height": 675,
@@ -1170,6 +1590,90 @@
   },
   {
     "name": "x-half_horizontal-reversible-steps-de-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-square-en-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-square-en-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-square-de-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-square-de-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-colonnade-en-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-colonnade-en-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-colonnade-de-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-impossible-colonnade-de-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-penrose-staircase-en-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-penrose-staircase-en-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-penrose-staircase-de-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-penrose-staircase-de-no",
     "width": 1836,
     "height": 675,
     "artHeight": 581.3999633789062,
@@ -1372,6 +1876,90 @@
     "failures": []
   },
   {
+    "name": "x-half_vertical-impossible-square-en-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-impossible-square-en-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-impossible-square-de-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-impossible-square-de-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-impossible-colonnade-en-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-impossible-colonnade-en-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-impossible-colonnade-de-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-impossible-colonnade-de-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-penrose-staircase-en-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-penrose-staircase-en-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-penrose-staircase-de-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-penrose-staircase-de-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
     "name": "x-quadrant-penrose-triangle-en-yes",
     "width": 909,
     "height": 675,
@@ -1562,6 +2150,90 @@
   },
   {
     "name": "x-quadrant-reversible-steps-de-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-square-en-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-square-en-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-square-de-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-square-de-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-colonnade-en-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-colonnade-en-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-colonnade-de-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-impossible-colonnade-de-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-penrose-staircase-en-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-penrose-staircase-en-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-penrose-staircase-de-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-penrose-staircase-de-no",
     "width": 909,
     "height": 675,
     "artHeight": 581.3999633789062,
@@ -1764,6 +2436,90 @@
     "failures": []
   },
   {
+    "name": "x-portrait-full-impossible-square-en-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-impossible-square-en-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-impossible-square-de-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-impossible-square-de-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-impossible-colonnade-en-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-impossible-colonnade-en-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-impossible-colonnade-de-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-impossible-colonnade-de-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-penrose-staircase-en-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-penrose-staircase-en-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-penrose-staircase-de-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-penrose-staircase-de-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
     "name": "x-portrait-half_horizontal-penrose-triangle-en-yes",
     "width": 1368,
     "height": 909,
@@ -1954,6 +2710,90 @@
   },
   {
     "name": "x-portrait-half_horizontal-reversible-steps-de-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-square-en-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-square-en-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-square-de-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-square-de-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-colonnade-en-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-colonnade-en-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-colonnade-de-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-impossible-colonnade-de-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-penrose-staircase-en-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-penrose-staircase-en-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-penrose-staircase-de-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-penrose-staircase-de-no",
     "width": 1368,
     "height": 909,
     "artHeight": 815.3999633789062,
@@ -2156,6 +2996,90 @@
     "failures": []
   },
   {
+    "name": "x-portrait-half_vertical-impossible-square-en-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-impossible-square-en-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-impossible-square-de-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-impossible-square-de-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-impossible-colonnade-en-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-impossible-colonnade-en-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-impossible-colonnade-de-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-impossible-colonnade-de-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-penrose-staircase-en-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-penrose-staircase-en-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-penrose-staircase-de-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-penrose-staircase-de-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
     "name": "x-portrait-quadrant-penrose-triangle-en-yes",
     "width": 675,
     "height": 909,
@@ -2346,6 +3270,90 @@
   },
   {
     "name": "x-portrait-quadrant-reversible-steps-de-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-square-en-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-square-en-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-square-de-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-square-de-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-colonnade-en-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-colonnade-en-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-colonnade-de-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-impossible-colonnade-de-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-penrose-staircase-en-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-penrose-staircase-en-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-penrose-staircase-de-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-penrose-staircase-de-no",
     "width": 675,
     "height": 909,
     "artHeight": 815.3999633789062,
