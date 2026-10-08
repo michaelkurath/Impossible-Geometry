@@ -112,6 +112,90 @@
     "failures": []
   },
   {
+    "name": "og-full-kanizsa-triangle-en-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-kanizsa-triangle-en-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-kanizsa-triangle-de-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-kanizsa-triangle-de-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-necker-cube-en-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-necker-cube-en-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-necker-cube-de-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-necker-cube-de-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-reversible-steps-en-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-reversible-steps-en-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-reversible-steps-de-yes",
+    "width": 780,
+    "height": 460,
+    "artHeight": 391.875,
+    "failures": []
+  },
+  {
+    "name": "og-full-reversible-steps-de-no",
+    "width": 780,
+    "height": 460,
+    "artHeight": 410.875,
+    "failures": []
+  },
+  {
     "name": "og-half_horizontal-penrose-triangle-en-yes",
     "width": 780,
     "height": 225,
@@ -218,6 +302,90 @@
   },
   {
     "name": "og-half_horizontal-reversible-cubes-de-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-kanizsa-triangle-en-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-kanizsa-triangle-en-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-kanizsa-triangle-de-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-kanizsa-triangle-de-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-necker-cube-en-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-necker-cube-en-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-necker-cube-de-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-necker-cube-de-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-reversible-steps-en-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-reversible-steps-en-no",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-reversible-steps-de-yes",
+    "width": 780,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-half_horizontal-reversible-steps-de-no",
     "width": 780,
     "height": 225,
     "artHeight": 173,
@@ -336,6 +504,90 @@
     "failures": []
   },
   {
+    "name": "og-half_vertical-kanizsa-triangle-en-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-kanizsa-triangle-en-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-kanizsa-triangle-de-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-kanizsa-triangle-de-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-necker-cube-en-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 389,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-necker-cube-en-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-necker-cube-de-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-necker-cube-de-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-reversible-steps-en-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 389,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-reversible-steps-en-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-reversible-steps-de-yes",
+    "width": 385,
+    "height": 460,
+    "artHeight": 377,
+    "failures": []
+  },
+  {
+    "name": "og-half_vertical-reversible-steps-de-no",
+    "width": 385,
+    "height": 460,
+    "artHeight": 408,
+    "failures": []
+  },
+  {
     "name": "og-quadrant-penrose-triangle-en-yes",
     "width": 385,
     "height": 225,
@@ -442,6 +694,90 @@
   },
   {
     "name": "og-quadrant-reversible-cubes-de-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-kanizsa-triangle-en-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-kanizsa-triangle-en-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-kanizsa-triangle-de-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-kanizsa-triangle-de-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-necker-cube-en-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-necker-cube-en-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-necker-cube-de-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-necker-cube-de-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-reversible-steps-en-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-reversible-steps-en-no",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-reversible-steps-de-yes",
+    "width": 385,
+    "height": 225,
+    "artHeight": 173,
+    "failures": []
+  },
+  {
+    "name": "og-quadrant-reversible-steps-de-no",
     "width": 385,
     "height": 225,
     "artHeight": 173,
@@ -560,6 +896,90 @@
     "failures": []
   },
   {
+    "name": "x-full-kanizsa-triangle-en-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-kanizsa-triangle-en-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-kanizsa-triangle-de-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-kanizsa-triangle-de-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-necker-cube-en-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-necker-cube-en-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-necker-cube-de-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-necker-cube-de-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-reversible-steps-en-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-reversible-steps-en-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
+    "name": "x-full-reversible-steps-de-yes",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1238.2874755859375,
+    "failures": []
+  },
+  {
+    "name": "x-full-reversible-steps-de-no",
+    "width": 1836,
+    "height": 1368,
+    "artHeight": 1278.9561767578125,
+    "failures": []
+  },
+  {
     "name": "x-half_horizontal-penrose-triangle-en-yes",
     "width": 1836,
     "height": 675,
@@ -666,6 +1086,90 @@
   },
   {
     "name": "x-half_horizontal-reversible-cubes-de-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-kanizsa-triangle-en-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-kanizsa-triangle-en-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-kanizsa-triangle-de-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-kanizsa-triangle-de-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-necker-cube-en-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-necker-cube-en-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-necker-cube-de-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-necker-cube-de-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-reversible-steps-en-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-reversible-steps-en-no",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-reversible-steps-de-yes",
+    "width": 1836,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-half_horizontal-reversible-steps-de-no",
     "width": 1836,
     "height": 675,
     "artHeight": 581.3999633789062,
@@ -784,6 +1288,90 @@
     "failures": []
   },
   {
+    "name": "x-half_vertical-kanizsa-triangle-en-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-kanizsa-triangle-en-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-kanizsa-triangle-de-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1205.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-kanizsa-triangle-de-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-necker-cube-en-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-necker-cube-en-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-necker-cube-de-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-necker-cube-de-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-reversible-steps-en-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1233.731201171875,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-reversible-steps-en-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-reversible-steps-de-yes",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1205.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-half_vertical-reversible-steps-de-no",
+    "width": 909,
+    "height": 1368,
+    "artHeight": 1274.4000244140625,
+    "failures": []
+  },
+  {
     "name": "x-quadrant-penrose-triangle-en-yes",
     "width": 909,
     "height": 675,
@@ -890,6 +1478,90 @@
   },
   {
     "name": "x-quadrant-reversible-cubes-de-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-kanizsa-triangle-en-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-kanizsa-triangle-en-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-kanizsa-triangle-de-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-kanizsa-triangle-de-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-necker-cube-en-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-necker-cube-en-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-necker-cube-de-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-necker-cube-de-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-reversible-steps-en-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-reversible-steps-en-no",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-reversible-steps-de-yes",
+    "width": 909,
+    "height": 675,
+    "artHeight": 581.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-quadrant-reversible-steps-de-no",
     "width": 909,
     "height": 675,
     "artHeight": 581.3999633789062,
@@ -1008,6 +1680,90 @@
     "failures": []
   },
   {
+    "name": "x-portrait-full-kanizsa-triangle-en-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-kanizsa-triangle-en-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-kanizsa-triangle-de-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-kanizsa-triangle-de-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-necker-cube-en-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-necker-cube-en-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-necker-cube-de-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-necker-cube-de-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-reversible-steps-en-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-reversible-steps-en-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-reversible-steps-de-yes",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1706.0343017578125,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-full-reversible-steps-de-no",
+    "width": 1368,
+    "height": 1836,
+    "artHeight": 1746.703125,
+    "failures": []
+  },
+  {
     "name": "x-portrait-half_horizontal-penrose-triangle-en-yes",
     "width": 1368,
     "height": 909,
@@ -1114,6 +1870,90 @@
   },
   {
     "name": "x-portrait-half_horizontal-reversible-cubes-de-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-kanizsa-triangle-en-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-kanizsa-triangle-en-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-kanizsa-triangle-de-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-kanizsa-triangle-de-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-necker-cube-en-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-necker-cube-en-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-necker-cube-de-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-necker-cube-de-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-reversible-steps-en-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-reversible-steps-en-no",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-reversible-steps-de-yes",
+    "width": 1368,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_horizontal-reversible-steps-de-no",
     "width": 1368,
     "height": 909,
     "artHeight": 815.3999633789062,
@@ -1232,6 +2072,90 @@
     "failures": []
   },
   {
+    "name": "x-portrait-half_vertical-kanizsa-triangle-en-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-kanizsa-triangle-en-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-kanizsa-triangle-de-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-kanizsa-triangle-de-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-necker-cube-en-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-necker-cube-en-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-necker-cube-de-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-necker-cube-de-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-reversible-steps-en-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-reversible-steps-en-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-reversible-steps-de-yes",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1673.6624755859375,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-half_vertical-reversible-steps-de-no",
+    "width": 675,
+    "height": 1836,
+    "artHeight": 1742.39990234375,
+    "failures": []
+  },
+  {
     "name": "x-portrait-quadrant-penrose-triangle-en-yes",
     "width": 675,
     "height": 909,
@@ -1338,6 +2262,90 @@
   },
   {
     "name": "x-portrait-quadrant-reversible-cubes-de-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-kanizsa-triangle-en-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-kanizsa-triangle-en-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-kanizsa-triangle-de-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-kanizsa-triangle-de-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-necker-cube-en-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-necker-cube-en-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-necker-cube-de-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-necker-cube-de-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-reversible-steps-en-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-reversible-steps-en-no",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-reversible-steps-de-yes",
+    "width": 675,
+    "height": 909,
+    "artHeight": 815.3999633789062,
+    "failures": []
+  },
+  {
+    "name": "x-portrait-quadrant-reversible-steps-de-no",
     "width": 675,
     "height": 909,
     "artHeight": 815.3999633789062,

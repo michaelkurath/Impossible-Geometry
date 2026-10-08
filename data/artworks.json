@@ -1,6 +1,58 @@
 [
-  {"id":"penrose-triangle","title":"Penrose Triangle","title_de":"Penrose-Dreieck","note":"Three plausible corners. One impossible loop.","note_de":"Drei plausible Ecken. Eine unmögliche Schleife.","kind":"impossible object"},
-  {"id":"impossible-cube","title":"Impossible Cube","title_de":"Unmöglicher Würfel","note":"Follow the upright: a rear edge passes in front of the front face.","note_de":"Folge der senkrechten Kante: Hinten wird plötzlich vorne.","kind":"impossible object"},
-  {"id":"impossible-trident","title":"Impossible Trident","title_de":"Unmöglicher Dreizack","note":"Three round prongs become two square arms.","note_de":"Drei runde Zinken werden zu zwei eckigen Armen.","kind":"impossible object"},
-  {"id":"reversible-cubes","title":"Reversible Cubes","title_de":"Kippende Würfel","note":"Raised blocks or recessed corners? Let the depth reverse.","note_de":"Würfel oder Vertiefungen? Lass die räumliche Wahrnehmung kippen.","kind":"depth reversal"}
+  {
+    "id": "penrose-triangle",
+    "title": "Penrose Triangle",
+    "title_de": "Penrose-Dreieck",
+    "note": "Three plausible corners. One impossible loop.",
+    "note_de": "Drei plausible Ecken. Eine unmögliche Schleife.",
+    "kind": "impossible object"
+  },
+  {
+    "id": "impossible-cube",
+    "title": "Impossible Cube",
+    "title_de": "Unmöglicher Würfel",
+    "note": "Follow the upright: a rear edge passes in front of the front face.",
+    "note_de": "Folge der senkrechten Kante: Hinten wird plötzlich vorne.",
+    "kind": "impossible object"
+  },
+  {
+    "id": "impossible-trident",
+    "title": "Impossible Trident",
+    "title_de": "Unmöglicher Dreizack",
+    "note": "Three round prongs become two square arms.",
+    "note_de": "Drei runde Zinken werden zu zwei eckigen Armen.",
+    "kind": "impossible object"
+  },
+  {
+    "id": "reversible-cubes",
+    "title": "Reversible Cubes",
+    "title_de": "Kippende Würfel",
+    "note": "Raised blocks or recessed corners? Let the depth reverse.",
+    "note_de": "Würfel oder Vertiefungen? Lass die räumliche Wahrnehmung kippen.",
+    "kind": "depth reversal"
+  },
+  {
+    "id": "kanizsa-triangle",
+    "title": "Kanizsa Triangle",
+    "title_de": "Kanizsa-Dreieck",
+    "note": "The bright triangle has no drawn edges. Your eye supplies them.",
+    "note_de": "Die helle Dreiecksfläche hat keine gezeichneten Kanten. Das Auge ergänzt sie.",
+    "kind": "illusory contour"
+  },
+  {
+    "id": "necker-cube",
+    "title": "Necker Cube",
+    "title_de": "Necker-Würfel",
+    "note": "Which square is in front? The wireframe flips as you look.",
+    "note_de": "Welches Quadrat liegt vorne? Das Drahtbild kippt beim Betrachten.",
+    "kind": "depth reversal"
+  },
+  {
+    "id": "reversible-steps",
+    "title": "Reversible Steps",
+    "title_de": "Kippende Stufen",
+    "note": "The same edges can rise toward you or recede into the page.",
+    "note_de": "Dieselben Kanten können auf dich zu steigen oder in die Fläche zurückfallen.",
+    "kind": "depth reversal"
+  }
 ]
