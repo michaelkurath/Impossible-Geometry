@@ -40,8 +40,8 @@ test('daily cycle respects local midnight and wraps',()=>{
  const pick=(date,fields={})=>select(inputFor({rotation:'daily',time_zone:'Europe/Zurich',...fields}),new Date(date)).selected_entry.id;
  assert.equal(pick('2026-10-08T21:59:59Z'),'penrose-triangle');
  assert.equal(pick('2026-10-08T22:00:00Z'),'impossible-cube');
- assert.equal(pick('2026-10-15T12:00:00Z'),'penrose-triangle');
- assert.equal(pick('2026-10-07T12:00:00Z'),'reversible-steps');
+ assert.equal(pick('2026-10-18T12:00:00Z'),'penrose-triangle');
+ assert.equal(pick('2026-10-07T12:00:00Z'),'penrose-staircase');
  assert.equal(pick('2026-10-08T22:00:00Z',{time_zone:'invalid'}),'penrose-triangle');
  assert.equal(localDay(new Date('2026-10-25T00:30:00Z'),'Europe/Zurich'),localDay(new Date('2026-10-25T01:30:00Z'),'Europe/Zurich'));
 });
