@@ -35,38 +35,16 @@ custom_fields:
 - keyname: author_bio
   name: About Impossible Geometry
   field_type: author_bio
-  category: art,education
-  description: Six original geometric drawings exploring impossible objects, reversible depth, and figure-ground perception. No external API or hosted images required.
-- keyname: rotation
-  name: Artwork rotation
-  field_type: select
-  options:
-  - Daily: daily
-  - Random each refresh: random
-  - Fixed artwork: fixed
-  default: daily
-  description: Daily cycles through the collection. Random shows every artwork before repeating.
-- keyname: artwork
-  name: Fixed artwork
-  field_type: select
-  options:
-  - Closed Circuit: tribar
-  - Four Corners: square
-  - Which Way Up: cubes
-  - Over Under Over: weave
-  - Positive Negative: tessellation
-  - Double Ascent: stairs
-  default: tribar
-  description: Used only when rotation is Fixed artwork.
-  optional: true
+  category: art
+  description: Original monochrome architectural artwork. Visual prototype with one artwork hosted in the GitHub repository. No external data API required.
 - keyname: show_explanation
   name: Show explanation
   field_type: select
   options:
   - 'Yes': 'yes'
   - 'No': 'no'
-  default: 'yes'
-  description: Adds a short viewing prompt in full and half-vertical layouts.
+  default: 'no'
+  description: Adds a short caption in full and half-vertical layouts.
 - keyname: language
   name: Language
   field_type: select
@@ -74,12 +52,7 @@ custom_fields:
   - English: en
   - Deutsch: de
   default: en
-- keyname: time_zone
-  name: Daily rotation time zone
-  field_type: time_zone
-  default: Europe/Zurich
-  optional: true
-  description: Daily artwork changes after midnight in this time zone, on the next scheduled refresh.
+
 name: Impossible Geometry
 description: Optical illusions for e-paper.
 refresh_interval: 60

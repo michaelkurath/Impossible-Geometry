@@ -1,9 +1,4 @@
-<div class="layout layout--row gap--medium">
-  <div class="ig-art">{{ geometry_art }}</div>
-  <div class="flex flex--col flex--center-y gap--small w--[32%] shrink-0">
-    <span class="label label--small lg:label--base" data-clamp="2">{{ selected.kind | default: 'OPTICAL STUDY' | escape }}</span>
-    <span class="title title--base lg:title--large" data-clamp="2">{{ selected.title | default: 'Closed Circuit' | escape }}</span>
-    <span class="label label--small">{{ selected.number | default: '01' }} / 06</span>
-  </div>
+<div class="layout layout--col gap--small">
+  {{ gallery_art }}
 </div>
-<div class="title_bar"><span class="title">Impossible Geometry</span><span class="instance">OPTICAL STUDIES</span></div>
+{{ gallery_footer_compact }}
