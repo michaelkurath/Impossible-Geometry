@@ -1,15 +1,61 @@
 {% assign fields = trmnl.plugin_settings.custom_fields_values %}
 {% assign language = fields.language | default: 'en' | downcase | strip %}
 {% assign show_note = fields.show_explanation | default: 'no' | downcase | strip %}
+<!-- BEGIN GENERATED METADATA -->
+{% assign artwork_id = selected_entry.id | default: 'penrose-triangle' %}
+{% case artwork_id %}
+{% when 'impossible-cube' %}
+{% assign artwork_id = 'impossible-cube' %}
+{% assign artwork_number = '02' %}
+{% assign artwork_title = 'Impossible Cube' %}
+{% assign artwork_note = 'Follow the upright: a rear edge passes in front of the front face.' %}
+{% if language == 'de' %}
+{% assign artwork_title = 'Unmöglicher Würfel' %}
+{% assign artwork_note = 'Folge der senkrechten Kante: Hinten wird plötzlich vorne.' %}
+{% endif %}
+{% when 'impossible-trident' %}
+{% assign artwork_id = 'impossible-trident' %}
+{% assign artwork_number = '03' %}
+{% assign artwork_title = 'Impossible Trident' %}
+{% assign artwork_note = 'Three round prongs become two square arms.' %}
+{% if language == 'de' %}
+{% assign artwork_title = 'Unmöglicher Dreizack' %}
+{% assign artwork_note = 'Drei runde Zinken werden zu zwei eckigen Armen.' %}
+{% endif %}
+{% when 'reversible-cubes' %}
+{% assign artwork_id = 'reversible-cubes' %}
+{% assign artwork_number = '04' %}
+{% assign artwork_title = 'Reversible Cubes' %}
+{% assign artwork_note = 'Raised blocks or recessed corners? Let the depth reverse.' %}
+{% if language == 'de' %}
+{% assign artwork_title = 'Kippende Würfel' %}
+{% assign artwork_note = 'Würfel oder Vertiefungen? Lass die räumliche Wahrnehmung kippen.' %}
+{% endif %}
+{% else %}
+{% assign artwork_id = 'penrose-triangle' %}
+{% assign artwork_number = '01' %}
 {% assign artwork_title = 'Penrose Triangle' %}
 {% assign artwork_note = 'Three plausible corners. One impossible loop.' %}
 {% if language == 'de' %}
-  {% assign artwork_title = 'Penrose-Dreieck' %}
-  {% assign artwork_note = 'Drei plausible Ecken. Eine unmögliche Schleife.' %}
+{% assign artwork_title = 'Penrose-Dreieck' %}
+{% assign artwork_note = 'Drei plausible Ecken. Eine unmögliche Schleife.' %}
 {% endif %}
+{% endcase %}
+<!-- END GENERATED METADATA -->
 {% capture gallery_art %}
 <div class="ig-art">
 <!-- BEGIN GENERATED ART -->
+{% case artwork_id %}
+{% when 'impossible-cube' %}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="55 20 490 440" preserveAspectRatio="xMidYMid meet" role="img" aria-label="{{ artwork_title | escape }}"><path d="M260 60H500V300H260Z" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M260 60H500V300H260Z" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M100 180H340V420H100Z" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M100 180H340V420H100Z" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M100 180L260 60" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M100 180L260 60" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M340 180L500 60" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M340 180L500 60" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M340 420L500 300" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M340 420L500 300" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M100 420L260 300" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M100 420L260 300" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M260 145V215 M340 268V332" fill="none" stroke="#fff" stroke-width="35"/><path d="M260 144V216" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M260 144V216" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M340 267V333" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="M340 267V333" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/><path d="M260 140V220 M340 263V337" fill="none" stroke="#fff" stroke-width="17"/></svg>
+
+{% when 'impossible-trident' %}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 35 565 360" preserveAspectRatio="xMidYMid meet" role="img" aria-label="{{ artwork_title | escape }}"><g transform="translate(45 95) rotate(-12 260 140)" stroke="#000" stroke-width="4" stroke-linejoin="round"><ellipse transform="translate(34 60) rotate(66.219865)" rx="21.28008" ry="11.3" fill="#000"/><ellipse transform="translate(34 140) rotate(66.219865)" rx="21.28008" ry="11.3" fill="#000"/><ellipse transform="translate(34 220) rotate(66.219865)" rx="21.28008" ry="11.3" fill="#000"/><path d="M440 200V120H420V160Z" fill="#000"/><path fill="none" d="M40 240H500V80L480 40H28 M28 200H440V120H28 M440 200L420 160V120 M500 80H40 M420 160H40"/></g></svg>
+
+{% when 'reversible-cubes' %}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="75 50 450 440" preserveAspectRatio="xMidYMid meet" role="img" aria-label="{{ artwork_title | escape }}"><polygon points="300,270 234.182,232 300,194 365.818,232" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="300,270 234.182,232 234.182,308 300,346" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><path d="M234.182 241.818L240.406 235.594 M234.182 255.818L249.282 240.718 M234.182 269.818L258.158 245.842 M234.182 283.818L267.033 250.967 M234.182 297.818L275.909 256.091 M236.603 309.397L284.785 261.215 M245.478 314.522L293.66 266.34 M254.354 319.646L300 274 M263.229 324.771L300 288 M272.105 329.895L300 302 M280.981 335.019L300 316 M289.856 340.144L300 330 M298.732 345.268L300 344" stroke="#000" stroke-width="2.3" fill="none"/><polygon points="300,270 365.818,232 365.818,308 300,346" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="431.636,270 365.818,232 431.636,194 497.454,232" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="431.636,270 365.818,232 365.818,308 431.636,346" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><path d="M365.818 236.182L368.469 233.531 M365.818 250.182L377.345 238.655 M365.818 264.182L386.221 243.779 M365.818 278.182L395.096 248.904 M365.818 292.182L403.972 254.028 M365.818 306.182L412.847 259.153 M373.541 312.459L421.723 264.277 M382.417 317.583L430.599 269.401 M391.292 322.708L431.636 282.364 M400.168 327.832L431.636 296.364 M409.044 332.956L431.636 310.364 M417.919 338.081L431.636 324.364 M426.795 343.205L431.636 338.364" stroke="#000" stroke-width="2.3" fill="none"/><polygon points="431.636,270 497.454,232 497.454,308 431.636,346" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="168.364,270 102.546,232 168.364,194 234.182,232" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="168.364,270 102.546,232 102.546,308 168.364,346" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><path d="M102.546 233.454L103.468 232.532 M102.546 247.454L112.344 237.656 M102.546 261.454L121.219 242.781 M102.546 275.454L130.095 247.905 M102.546 289.454L138.97 253.03 M102.546 303.454L147.846 258.154 M108.54 311.46L156.722 263.278 M117.415 316.585L165.597 268.403 M126.291 321.709L168.364 279.636 M135.167 326.833L168.364 293.636 M144.042 331.958L168.364 307.636 M152.918 337.082L168.364 321.636 M161.794 342.206L168.364 335.636" stroke="#000" stroke-width="2.3" fill="none"/><polygon points="168.364,270 234.182,232 234.182,308 168.364,346" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="365.818,384 300,346 365.818,308 431.636,346" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="365.818,384 300,346 300,422 365.818,460" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><path d="M300 358L307.608 350.392 M300 372L316.483 355.517 M300 386L325.359 360.641 M300 400L334.235 365.765 M300 414L343.11 370.89 M303.804 424.196L351.986 376.014 M312.679 429.321L360.862 381.138 M321.555 434.445L365.818 390.182 M330.431 439.569L365.818 404.182 M339.306 444.694L365.818 418.182 M348.182 449.818L365.818 432.182 M357.058 454.942L365.818 446.182" stroke="#000" stroke-width="2.3" fill="none"/><polygon points="365.818,384 431.636,346 431.636,422 365.818,460" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="234.182,384 168.364,346 234.182,308 300,346" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="234.182,384 168.364,346 168.364,422 234.182,460" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><path d="M168.364 349.636L170.669 347.331 M168.364 363.636L179.545 352.455 M168.364 377.636L188.42 357.58 M168.364 391.636L197.296 362.704 M168.364 405.636L206.172 367.828 M168.364 419.636L215.047 372.953 M175.741 426.259L223.923 378.077 M184.617 431.383L232.799 383.201 M193.492 436.508L234.182 395.818 M202.368 441.632L234.182 409.818 M211.244 446.756L234.182 423.818 M220.119 451.881L234.182 437.818 M228.995 457.005L234.182 451.818" stroke="#000" stroke-width="2.3" fill="none"/><polygon points="234.182,384 300,346 300,422 234.182,460" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="365.818,156 300,118 365.818,80 431.636,118" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="365.818,156 300,118 300,194 365.818,232" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><path d="M300 120L301.268 118.732 M300 134L310.144 123.856 M300 148L319.019 128.981 M300 162L327.895 134.105 M300 176L336.771 139.229 M300 190L345.646 144.354 M306.34 197.66L354.522 149.478 M315.215 202.785L363.397 154.603 M324.091 207.909L365.818 166.182 M332.967 213.033L365.818 180.182 M341.842 218.158L365.818 194.182 M350.718 223.282L365.818 208.182 M359.594 228.406L365.818 222.182" stroke="#000" stroke-width="2.3" fill="none"/><polygon points="365.818,156 431.636,118 431.636,194 365.818,232" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="234.182,156 168.364,118 234.182,80 300,118" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><polygon points="234.182,156 168.364,118 168.364,194 234.182,232" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/><path d="M168.364 125.636L173.205 120.795 M168.364 139.636L182.081 125.919 M168.364 153.636L190.956 131.044 M168.364 167.636L199.832 136.168 M168.364 181.636L208.708 141.292 M169.401 194.599L217.583 146.417 M178.277 199.723L226.459 151.541 M187.153 204.847L234.182 157.818 M196.028 209.972L234.182 171.818 M204.904 215.096L234.182 185.818 M213.779 220.221L234.182 199.818 M222.655 225.345L234.182 213.818 M231.531 230.469L234.182 227.818" stroke="#000" stroke-width="2.3" fill="none"/><polygon points="234.182,156 300,118 300,194 234.182,232" fill="#000" stroke="#000" stroke-width="3" stroke-linejoin="round"/></svg>
+
+{% else %}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 18 600 530" preserveAspectRatio="xMidYMid meet" role="img" aria-label="{{ artwork_title | escape }}">
 <polygon points="260,40 460,386.41 220,386.41 180,455.692 580,455.692 340,40" fill="#fff"/>
 <polygon points="260,40 20,455.692 60,524.974 260,178.564 380,386.41 460,386.41" fill="#fff"/>
@@ -19,14 +65,15 @@
 <polygon points="260,40 20,455.692 60,524.974 260,178.564 380,386.41 460,386.41" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
 <polygon points="260,178.564 300,247.846 180,455.692 580,455.692 540,524.974 60,524.974" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
 </svg>
-<!-- END GENERATED ART -->
+
+{% endcase %}<!-- END GENERATED ART -->
 </div>
 {% endcapture %}
 {% capture gallery_footer %}
 <div class="title_bar"><span class="title">Impossible Geometry</span><span class="instance">{{ artwork_title | escape }}</span></div>
 {% endcapture %}
 {% capture gallery_footer_compact %}
-<div class="title_bar"><span class="title">{{ artwork_title | escape }}</span><span class="instance">01</span></div>
+<div class="title_bar"><span class="title">{{ artwork_title | escape }}</span><span class="instance">{{ artwork_number }} / 04</span></div>
 {% endcapture %}
 <style>
 /* Flexible SVG box preserves the full composition in every mashup size. */

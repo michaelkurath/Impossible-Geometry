@@ -1,0 +1,6 @@
+[
+  {"id":"penrose-triangle","title":"Penrose Triangle","title_de":"Penrose-Dreieck","note":"Three plausible corners. One impossible loop.","note_de":"Drei plausible Ecken. Eine unmögliche Schleife.","kind":"impossible object"},
+  {"id":"impossible-cube","title":"Impossible Cube","title_de":"Unmöglicher Würfel","note":"Follow the upright: a rear edge passes in front of the front face.","note_de":"Folge der senkrechten Kante: Hinten wird plötzlich vorne.","kind":"impossible object"},
+  {"id":"impossible-trident","title":"Impossible Trident","title_de":"Unmöglicher Dreizack","note":"Three round prongs become two square arms.","note_de":"Drei runde Zinken werden zu zwei eckigen Armen.","kind":"impossible object"},
+  {"id":"reversible-cubes","title":"Reversible Cubes","title_de":"Kippende Würfel","note":"Raised blocks or recessed corners? Let the depth reverse.","note_de":"Würfel oder Vertiefungen? Lass die räumliche Wahrnehmung kippen.","kind":"depth reversal"}
+]

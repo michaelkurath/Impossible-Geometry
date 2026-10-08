@@ -31,22 +31,71 @@ function hatch(polygon, pitch=16) {
   }
   return segments.join(' ');
 }
-function svg(label='Penrose triangle') {
+function triangle(label='Penrose triangle') {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 18 600 530" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${label}">\n`
     +faces.map(f=>`<polygon points="${points(f.points)}" fill="${f.fill}"/>`).join('\n')
     +`\n<path d="${hatch(faces[1].points)}" fill="none" stroke="#000" stroke-width="2.5"/>\n`
     +faces.map(f=>`<polygon points="${points(f.points)}" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"/>`).join('\n')+'\n</svg>\n';
 }
+const catalogue=JSON.parse(fs.readFileSync(path.join(root,'data/artworks.json'),'utf8'));
+function wrap(body,label,viewBox='0 0 600 540') {return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${label}">${body}</svg>\n`;}
+function polygon(p,fill) {return `<polygon points="${points(p)}" fill="${fill}" stroke="#000" stroke-width="3" stroke-linejoin="round"/>`;}
+function impossibleCube(label) {
+  // Two equal square frames offset in projection. The rear upright deliberately
+  // crosses OVER the near top rail; the near right upright crosses over the rear
+  // bottom rail. These opposing occlusions prevent a consistent depth ordering.
+  const beam=d=>`<path d="${d}" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/>`;
+  let body=beam('M260 60H500V300H260Z')+beam('M100 180H340V420H100Z');
+  for(const d of ['M100 180L260 60','M340 180L500 60','M340 420L500 300','M100 420L260 300'])body+=beam(d);
+  // White clearance masks isolate the front/back reversal at the two crossings.
+  body+='<path d="M260 145V215 M340 268V332" fill="none" stroke="#fff" stroke-width="35"/>';
+  body+=beam('M260 144V216')+beam('M340 267V333');
+  body+='<path d="M260 140V220 M340 263V337" fill="none" stroke="#fff" stroke-width="17"/>';
+  return wrap(body,label,'55 20 490 440');
+}
+function trident(label) {
+  // Public-domain Poiuyt construction by AnonMoos, simplified and reoriented.
+  const ends=[60,140,220].map(y=>`<ellipse transform="translate(34 ${y}) rotate(66.219865)" rx="21.28008" ry="11.3" fill="#000"/>`).join('');
+  const body=`<g transform="translate(45 95) rotate(-12 260 140)" stroke="#000" stroke-width="4" stroke-linejoin="round">${ends}<path d="M440 200V120H420V160Z" fill="#000"/><path fill="none" d="M40 240H500V80L480 40H28 M28 200H440V120H28 M440 200L420 160V120 M500 80H40 M420 160H40"/></g>`;
+  return wrap(body,label,'20 35 565 360');
+}
+function cubes(label) {
+  const r=76,a=r*Math.sqrt(3)/2;
+  const centres=[[300,270],[300+2*a,270],[300-2*a,270],[300+a,270+1.5*r],[300-a,270+1.5*r],[300+a,270-1.5*r],[300-a,270-1.5*r]];
+  let body='';
+  for(const [x,y] of centres){
+    const c=[x,y],top=[x,y-r],ne=[x+a,y-r/2],se=[x+a,y+r/2],bottom=[x,y+r],sw=[x-a,y+r/2],nw=[x-a,y-r/2];
+    body+=polygon([c,nw,top,ne],'#fff');
+    const shaded=[c,nw,sw,bottom];
+    body+=polygon(shaded,'#fff')+`<path d="${hatch(shaded,14)}" stroke="#000" stroke-width="2.3" fill="none"/>`;
+    body+=polygon([c,ne,se,bottom],'#000');
+  }
+  return wrap(body,label,'75 50 450 440');
+}
+const renderers={'penrose-triangle':triangle,'impossible-cube':impossibleCube,'impossible-trident':trident,'reversible-cubes':cubes};
+function svg(id,label) {return renderers[id](label);}
 function build(check=false){
-  const asset=svg();
+  if(!catalogue.length||new Set(catalogue.map(x=>x.id)).size!==catalogue.length)throw Error('Empty or duplicate catalogue');
+  for(const entry of catalogue)if(!renderers[entry.id])throw Error('Missing artwork '+entry.id);
+  const write=(file,contents)=>{if(check){if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==contents)throw Error('Generated file out of date: '+file);}else fs.writeFileSync(file,contents);};
+  const metadata=["{% assign artwork_id = selected_entry.id | default: 'penrose-triangle' %}","{% case artwork_id %}"];
+  const art=['{% case artwork_id %}'];
+  for(const [index,entry] of catalogue.entries()){
+    const condition=index===0?'{% else %}':`{% when '${entry.id}' %}`;
+    const block=[condition,`{% assign artwork_id = '${entry.id}' %}`,`{% assign artwork_number = '${String(index+1).padStart(2,'0')}' %}`,`{% assign artwork_title = '${entry.title}' %}`,`{% assign artwork_note = '${entry.note}' %}`,"{% if language == 'de' %}",`{% assign artwork_title = '${entry.title_de}' %}`,`{% assign artwork_note = '${entry.note_de}' %}`,'{% endif %}'].join('\n');
+    if(index===0){metadata.fallback=block;art.fallback=condition+'\n'+svg(entry.id,'{{ artwork_title | escape }}');}
+    else {metadata.push(block);art.push(condition+'\n'+svg(entry.id,'{{ artwork_title | escape }}'));}
+    write(path.join(root,`assets/artwork/${entry.id}.svg`),svg(entry.id,entry.title));
+  }
+  metadata.push(metadata.fallback,'{% endcase %}');art.push(art.fallback,'{% endcase %}');
   const sharedPath=path.join(root,'src/shared.liquid');
-  const before=fs.readFileSync(sharedPath,'utf8');
-  const after=before.replace(/<!-- BEGIN GENERATED ART -->[\s\S]*?<!-- END GENERATED ART -->/,`<!-- BEGIN GENERATED ART -->\n${svg('{{ artwork_title | escape }}')}<!-- END GENERATED ART -->`);
-  if(before===after && !before.includes('BEGIN GENERATED ART'))throw Error('Missing SVG markers');
-  const target=path.join(root,'assets/artwork/penrose-triangle.svg');
-  if(check){
-    if(!fs.existsSync(target)||fs.readFileSync(target,'utf8')!==asset||before!==after)throw Error('Generated artwork is out of date. Run npm run build:art');
-  } else { fs.writeFileSync(target,asset);fs.writeFileSync(sharedPath,after); }
+  let shared=fs.readFileSync(sharedPath,'utf8');
+  shared=shared.replace(/<!-- BEGIN GENERATED METADATA -->[\s\S]*?<!-- END GENERATED METADATA -->/,'<!-- BEGIN GENERATED METADATA -->\n'+metadata.join('\n')+'\n<!-- END GENERATED METADATA -->');
+  shared=shared.replace(/<!-- BEGIN GENERATED ART -->[\s\S]*?<!-- END GENERATED ART -->/,'<!-- BEGIN GENERATED ART -->\n'+art.join('\n')+'<!-- END GENERATED ART -->');
+  write(sharedPath,shared);
+  const transformPath=path.join(root,'src/transform.js');
+  const transform=fs.readFileSync(transformPath,'utf8').replace(/\/\/ BEGIN GENERATED CATALOGUE[\s\S]*?\/\/ END GENERATED CATALOGUE/,'// BEGIN GENERATED CATALOGUE\nconst CATALOGUE = '+JSON.stringify(catalogue,null,2)+';\n// END GENERATED CATALOGUE');
+  write(transformPath,transform);
 }
 if(require.main===module)build(process.argv.includes('--check'));
-module.exports={faces,hatch,svg,build};
+module.exports={faces,hatch,svg,build,catalogue};

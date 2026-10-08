@@ -3,8 +3,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const {Liquid}=require('liquidjs');
 const {chromium}=require('playwright');
-const {run}=require('../src/transform');
-const CATALOGUE=[{id:'penrose-triangle'}];
+const {run,CATALOGUE}=require('../src/transform');
 const root=path.resolve(__dirname,'..');
 const cache=path.join(root,'.cache');
 const output=path.join(root,'previews');
@@ -57,7 +56,7 @@ async function main(){
       }
       if(art.height<60||art.width<100)failures.push('art too small');
       const svg=root.querySelector('.ig-art svg');
-      if(!svg || svg.querySelectorAll('polygon').length!==6)failures.push('SVG missing');
+      if(!svg || !svg.querySelector('polygon,path'))failures.push('SVG missing');
       if(root.querySelector('img'))failures.push('external image dependency');
       for(const el of root.querySelectorAll('.title_bar .title,.title_bar .instance')) {
         if(el.scrollWidth>el.clientWidth+1)failures.push('footer text clipped');
