@@ -1,16 +1,4 @@
-{% assign fields = trmnl.plugin_settings.custom_fields_values %}
-{% assign language = fields.language | default: 'en' | downcase | strip %}
-{% assign show_note = fields.show_explanation | default: 'no' | downcase | strip %}
-{% assign artwork_title = 'Penrose Triangle' %}
-{% assign artwork_note = 'Three plausible corners. One impossible loop.' %}
-{% if language == 'de' %}
-  {% assign artwork_title = 'Penrose-Dreieck' %}
-  {% assign artwork_note = 'Drei plausible Ecken. Eine unmögliche Schleife.' %}
-{% endif %}
-{% capture gallery_art %}
-<div class="ig-art">
-<!-- BEGIN GENERATED ART -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 18 600 530" preserveAspectRatio="xMidYMid meet" role="img" aria-label="{{ artwork_title | escape }}">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 18 600 530" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Penrose triangle">
 <polygon points="260,40 460,386.41 220,386.41 180,455.692 580,455.692 340,40" fill="#fff"/>
 <polygon points="260,40 20,455.692 60,524.974 260,178.564 380,386.41 460,386.41" fill="#fff"/>
 <polygon points="260,178.564 300,247.846 180,455.692 580,455.692 540,524.974 60,524.974" fill="#000"/>
@@ -19,17 +7,3 @@
 <polygon points="260,40 20,455.692 60,524.974 260,178.564 380,386.41 460,386.41" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
 <polygon points="260,178.564 300,247.846 180,455.692 580,455.692 540,524.974 60,524.974" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
 </svg>
-<!-- END GENERATED ART -->
-</div>
-{% endcapture %}
-{% capture gallery_footer %}
-<div class="title_bar"><span class="title">Impossible Geometry</span><span class="instance">{{ artwork_title | escape }}</span></div>
-{% endcapture %}
-{% capture gallery_footer_compact %}
-<div class="title_bar"><span class="title">{{ artwork_title | escape }}</span><span class="instance">01</span></div>
-{% endcapture %}
-<style>
-/* Flexible SVG box preserves the full composition in every mashup size. */
-.ig-art { flex: 1 1 0; min-height: 0; min-width: 0; width: 100%; display: flex; align-items: center; justify-content: center; }
-.ig-art > svg { display: block; width: 100%; height: 100%; }
-</style>

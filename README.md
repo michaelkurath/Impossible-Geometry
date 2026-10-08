@@ -1,28 +1,43 @@
 # Impossible Geometry
 
-A [TRMNL](https://trmnl.com) plugin for ePaper displays, connected by
-[GitHub Sync](https://help.trmnl.com/en/articles/15977899-github-sync): every save in TRMNL lands here as a commit.
+A minimal geometric art plugin for [TRMNL](https://trmnl.com/): one precisely constructed Penrose triangle with white, black and hatched faces.
 
-<img width="150" alt="image" src="https://trmnl.com/images/brand/badges/light/works-with-trmnl/trmnl-badge-works-with-light.svg" />
+![OG full-screen preview](previews/og-full-penrose-triangle-en-no.png)
 
-### Develop locally
+The artwork is embedded SVG. It needs no image hosting, polling API, credentials or saved state. The complete triangle is preserved in Full, Half Horizontal, Half Vertical and Quadrant layouts on OG and X. Captions default off; English and German are available.
 
-Templates and settings live in [`src/`](src/), ready for [trmnlp](https://github.com/usetrmnl/trmnlp):
+This is a **single-artwork design prototype**. It does not offer rotation or a collection yet. Physical-device testing is still pending.
+
+## Install
+
+Repository: https://github.com/michaelkurath/Impossible-Geometry
+
+Use `src/settings.yml`, the four layout files, `shared.liquid` and `transform.js` with the existing private plugin (ID 499458), using your normal trmnlp workflow. Shared contains the complete artwork; you do not need to upload the separate SVG asset. A public recipe link will be added after publication.
+
+## Settings
+
+| Setting | Values | Default |
+| --- | --- | --- |
+| Language | `en`, `de` | `en` |
+| Show explanation | `yes`, `no` | `no` |
+
+Settings are trimmed and lowercased. Missing or unsupported language falls back to English; explanations appear only for `yes`, in full and half-vertical layouts. The artwork renders even if transform output is missing.
+
+## Development
 
 ```sh
-gem install trmnl_preview
+npm install
+npx playwright install --with-deps chromium
+npm run build:art
+npm run check:art
+npm test
+npm run render
+# Optional, with trmnlp installed:
 trmnlp serve
 ```
 
-### Tests
+`scripts/build-art.cjs` defines the geometry once and produces the standalone SVG and generated block in `src/shared.liquid`. Edit the generator rather than either output. The three faces follow an exact 60-degree lattice. Hatch segments are intersected with the shaded face; no pattern IDs can clash across plugin instances.
 
-Put RSpec files in `tests/` and run them with fake APIs, a fixed clock and every TRMNL device.
-See [Testing plugins](https://github.com/usetrmnl/trmnlp#testing-plugins):
+The fallback renderer uses LiquidJS, Chromium and TRMNL Framework 3.3.1. It checks all four layouts on OG, X landscape and X portrait, both languages, and both caption settings. It validates bounds, footer text overflow and embedded artwork. It does not reproduce physical e-paper rasterization.
 
-```sh
-trmnlp test --report report
-```
-
-### Discoverability
-
-Add the `trmnl` topic to this repo so other TRMNL plugin builders can find it.
+[Artwork and source credit](docs/artwork.md) · [Validation](docs/validation.md) · [SVG](assets/artwork/penrose-triangle.svg)
