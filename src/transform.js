@@ -79,6 +79,30 @@ const CATALOGUE = [
     "note": "Every flight climbs, yet the staircase returns to its beginning.",
     "note_de": "Jeder Treppenlauf steigt an. Trotzdem endet die Treppe an ihrem Anfang.",
     "kind": "impossible object"
+  },
+  {
+    "id": "impossible-joinery",
+    "title": "Impossible Joinery",
+    "title_de": "Unmögliche Verbindung",
+    "note": "Follow each beam: its joints disagree about which side is nearer.",
+    "note_de": "Folge jedem Balken: Seine Verbindungen widersprechen sich in der Tiefe.",
+    "kind": "impossible object"
+  },
+  {
+    "id": "block-triangle",
+    "title": "Block Triangle",
+    "title_de": "Würfel-Dreieck",
+    "note": "Nine separate cubes suggest a loop that cannot close in space.",
+    "note_de": "Neun einzelne Würfel bilden eine Schleife, die sich im Raum nicht schliessen kann.",
+    "kind": "impossible object"
+  },
+  {
+    "id": "impossible-hexnut",
+    "title": "Impossible Hexnut",
+    "title_de": "Unmögliche Sechskantmutter",
+    "note": "Follow the bore: the inner wall changes its apparent depth.",
+    "note_de": "Folge der Bohrung: Die Innenwand wechselt ihre räumliche Lage.",
+    "kind": "impossible object"
   }
 ];
 // END GENERATED CATALOGUE
