@@ -4,7 +4,7 @@ const path=require('node:path');
 const {Liquid}=require('liquidjs');
 const {chromium}=require('playwright');
 const {run}=require('../src/transform');
-const CATALOGUE=[{id:'returning-arcade'}];
+const CATALOGUE=[{id:'penrose-triangle'}];
 const root=path.resolve(__dirname,'..');
 const cache=path.join(root,'.cache');
 const output=path.join(root,'previews');
@@ -36,7 +36,7 @@ async function main(){
   for(const profile of profiles)for(const layout of layouts)for(const entry of CATALOGUE)for(const language of ['en','de'])for(const note of ['yes','no']){
     const trmnl={plugin_settings:{custom_fields_values:{rotation:'fixed',artwork:entry.id,language,show_explanation:note}}};
     const vars={...run({trmnl}),trmnl};
-    const markup=(await engine.parseAndRender(read('shared.liquid')+read(layout+'.liquid'),vars)).replace(/https:\/\/raw.githubusercontent.com[^\"]+returning-arcade.png/g, 'file://'+path.join(root,'assets/artwork/returning-arcade.png'));
+    const markup=await engine.parseAndRender(read('shared.liquid')+read(layout+'.liquid'),vars);
     const view=`<div class="view view--${layout}" id="subject">${markup}</div>`;
     const modifiers={half_vertical:'1Lx1R',half_horizontal:'1Tx1B',quadrant:'2x2'};
     const count=layout==='quadrant'?3:1;
@@ -51,13 +51,17 @@ async function main(){
       const r=root.getBoundingClientRect();
       const art=root.querySelector('.ig-art').getBoundingClientRect();
       const failures=[];
-      for(const el of root.querySelectorAll('.layout,.title_bar,.ig-art,.ig-art > img,.title,.instance,.description,.label')){
+      for(const el of root.querySelectorAll('.layout,.title_bar,.ig-art,.ig-art > svg,.title,.instance,.description,.label')){
         const b=el.getBoundingClientRect();
         if(b.width&&b.height&&(b.top<r.top-1||b.left<r.left-1||b.bottom>r.bottom+1||b.right>r.right+1))failures.push(el.className);
       }
       if(art.height<60||art.width<100)failures.push('art too small');
-      const image=root.querySelector('.ig-art img');
-      if(!image || !image.complete || !image.naturalWidth)failures.push('image failed');
+      const svg=root.querySelector('.ig-art svg');
+      if(!svg || svg.querySelectorAll('polygon').length!==6)failures.push('SVG missing');
+      if(root.querySelector('img'))failures.push('external image dependency');
+      for(const el of root.querySelectorAll('.title_bar .title,.title_bar .instance')) {
+        if(el.scrollWidth>el.clientWidth+1)failures.push('footer text clipped');
+      }
       return {width:r.width,height:r.height,artHeight:art.height,failures};
     });
     const name=`${profile.name}-${layout}-${entry.id}-${language}-${note}`;

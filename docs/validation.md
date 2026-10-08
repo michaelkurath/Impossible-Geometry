@@ -1,11 +1,9 @@
 # Validation — 2026-10-08
 
-- Four input/rendering tests passed: missing input, null input, empty settings, and normalized German/caption settings.
-- Framework-backed Chromium rendering: 48 combinations (4 layouts × OG/X/X portrait × EN/DE × captions on/off).
-- Image-load and bounds checks passed in the initial run. Visual review caught a clipped long instance in X portrait smaller views; compact footers now show artwork title and entry number, and instance elements are included in bounds checks.
-- All 12 default English previews visually inspected. Full landscape is the intended presentation. Narrow portrait and half-horizontal retain the entire composition with substantial white space.
-- `trmnlp` is unavailable in this environment; LiquidJS and TRMNL 3.3.1 Chromium rendering were used instead.
-- Remote image is substituted with its identical local file for reproducible rendering; deployed URL requires separate verification after push.
-- Physical e-paper tone reproduction has not been verified. Optical impossibility is still a design limitation, not a test pass.
-
-See `previews/render-report.json` for the final machine-readable report and PNGs alongside it.
+- Six tests: rendering with missing/null/empty input, normalized German/caption settings, agreement between source and generated SVG, and repeated plugin instances without SVG ID collisions.
+- 48 framework-backed render combinations: 4 layouts × OG/X landscape/X portrait × EN/DE × captions on/off.
+- Bounds checks include image box, SVG, title bar, caption and footer text overflow. Artwork is embedded; no remote artwork load is involved.
+- All 12 default English screenshots are in `previews/`; `render-report.json` contains the machine-readable checks.
+- trmnlp is not installed here. LiquidJS, Chromium and TRMNL Framework 3.3.1 were used as the fallback renderer.
+- Physical 1-bit/grayscale rasterization remains unverified. SVG edges are antialiased in the browser previews. The spaced hatching is designed to remain legible, but needs an OG hardware check.
+- Half-horizontal and tall portrait views preserve the entire triangle with intentional white space. No part of the illusion is cropped.

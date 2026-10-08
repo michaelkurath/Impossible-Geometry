@@ -1,33 +1,43 @@
 # Impossible Geometry
 
-Original monochrome architectural art for [TRMNL](https://trmnl.com/). **Work in progress: single-artwork visual prototype.**
+A minimal geometric art plugin for [TRMNL](https://trmnl.com/): one precisely constructed Penrose triangle with white, black and hatched faces.
 
-![The Returning Arcade](assets/artwork/returning-arcade.png)
+![OG full-screen preview](previews/og-full-penrose-triangle-en-no.png)
 
-The Returning Arcade replaces the initial six vector exercises with a full-screen gallery study. It is AI-generated original artwork, not a reproduction of an Escher print. Its architectural depth is promising; the impossible connection still needs a stronger visual pass before release.
+The artwork is embedded SVG. It needs no image hosting, polling API, credentials or saved state. The complete triangle is preserved in Full, Half Horizontal, Half Vertical and Quadrant layouts on OG and X. Captions default off; English and German are available.
 
-## Layouts
+This is a **single-artwork design prototype**. It does not offer rotation or a collection yet. Physical-device testing is still pending.
 
-Full, Half Horizontal, Half Vertical and Quadrant preserve the complete image. A standard title bar carries the artwork name. Explanations default off. English and German are available. Rotation controls are intentionally absent while there is one artwork.
-
-The framework's image dithering handles monochrome rendering; final appearance must be checked on physical OG and X hardware. Portrait and narrow views retain the composition and consequently have more white space.
-
-## Install and develop
-
-This branch is a design preview. Import `src/settings.yml` and the four Liquid layouts plus `shared.liquid` into the existing private plugin (ID 499458), or use your normal trmnlp workflow. No polling API is required. The PNG is hosted in this repository; rendering requires access to raw.githubusercontent.com. The image URL is pinned to the draft branch until release, so retain that branch until the URL is updated.
+## Install
 
 Repository: https://github.com/michaelkurath/Impossible-Geometry
 
-A public recipe link will be added when published; none has been assigned yet.
+Use `src/settings.yml`, the four layout files, `shared.liquid` and `transform.js` with the existing private plugin (ID 499458), using your normal trmnlp workflow. Shared contains the complete artwork; you do not need to upload the separate SVG asset. A public recipe link will be added after publication.
+
+## Settings
+
+| Setting | Values | Default |
+| --- | --- | --- |
+| Language | `en`, `de` | `en` |
+| Show explanation | `yes`, `no` | `no` |
+
+Settings are trimmed and lowercased. Missing or unsupported language falls back to English; explanations appear only for `yes`, in full and half-vertical layouts. The artwork renders even if transform output is missing.
+
+## Development
 
 ```sh
 npm install
+npx playwright install --with-deps chromium
+npm run build:art
+npm run check:art
 npm test
 npm run render
 # Optional, with trmnlp installed:
 trmnlp serve
 ```
 
-The fallback renderer uses LiquidJS, Chromium and TRMNL Framework 3.3.1. It checks all four layouts on OG, X landscape and X portrait with both languages and caption settings. It checks image loading and element bounds; it does not emulate physical e-paper dithering or prove the artwork's optical illusion.
+`scripts/build-art.cjs` defines the geometry once and produces the standalone SVG and generated block in `src/shared.liquid`. Edit the generator rather than either output. The three faces follow an exact 60-degree lattice. Hatch segments are intersected with the shaded face; no pattern IDs can clash across plugin instances.
 
-See [artwork provenance](docs/artwork.md) and [validation](docs/validation.md).
+The fallback renderer uses LiquidJS, Chromium and TRMNL Framework 3.3.1. It checks all four layouts on OG, X landscape and X portrait, both languages, and both caption settings. It validates bounds, footer text overflow and embedded artwork. It does not reproduce physical e-paper rasterization.
+
+[Artwork and source credit](docs/artwork.md) · [Validation](docs/validation.md) · [SVG](assets/artwork/penrose-triangle.svg)

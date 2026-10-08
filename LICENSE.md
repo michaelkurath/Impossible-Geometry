@@ -8,4 +8,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Generated artwork: to the extent applicable rights exist, made available under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). See docs/artwork.md for provenance. Publication to the TRMNL community is subject to https://trmnl.com/plugin-license. No affiliation with M. C. Escher or his estate.
+Vector artwork: uses the public-domain Penrose construction credited in docs/artwork.md. Project-authored vector adaptations are available under the MIT terms above. Prior generated artwork, recoverable in Git history, retains the CC BY 4.0 notice from its original commit.
+
+Publication to the TRMNL community is subject to https://trmnl.com/plugin-license. No affiliation with M. C. Escher or his estate.

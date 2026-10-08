@@ -36,7 +36,7 @@ custom_fields:
   name: About Impossible Geometry
   field_type: author_bio
   category: art
-  description: Original monochrome architectural artwork. Visual prototype with one artwork hosted in the GitHub repository. No external data API required.
+  description: A precise Penrose triangle with black, white and hatched faces. Embedded vector artwork; no external API or image hosting required.
 - keyname: show_explanation
   name: Show explanation
   field_type: select

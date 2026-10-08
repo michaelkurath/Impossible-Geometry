@@ -1,335 +1,335 @@
 [
   {
-    "name": "og-full-returning-arcade-en-yes",
+    "name": "og-full-penrose-triangle-en-yes",
     "width": 780,
     "height": 460,
     "artHeight": 391.875,
     "failures": []
   },
   {
-    "name": "og-full-returning-arcade-en-no",
+    "name": "og-full-penrose-triangle-en-no",
     "width": 780,
     "height": 460,
     "artHeight": 410.875,
     "failures": []
   },
   {
-    "name": "og-full-returning-arcade-de-yes",
+    "name": "og-full-penrose-triangle-de-yes",
     "width": 780,
     "height": 460,
     "artHeight": 391.875,
     "failures": []
   },
   {
-    "name": "og-full-returning-arcade-de-no",
+    "name": "og-full-penrose-triangle-de-no",
     "width": 780,
     "height": 460,
     "artHeight": 410.875,
     "failures": []
   },
   {
-    "name": "og-half_horizontal-returning-arcade-en-yes",
+    "name": "og-half_horizontal-penrose-triangle-en-yes",
     "width": 780,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "og-half_horizontal-returning-arcade-en-no",
+    "name": "og-half_horizontal-penrose-triangle-en-no",
     "width": 780,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "og-half_horizontal-returning-arcade-de-yes",
+    "name": "og-half_horizontal-penrose-triangle-de-yes",
     "width": 780,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "og-half_horizontal-returning-arcade-de-no",
+    "name": "og-half_horizontal-penrose-triangle-de-no",
     "width": 780,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "og-half_vertical-returning-arcade-en-yes",
+    "name": "og-half_vertical-penrose-triangle-en-yes",
     "width": 385,
     "height": 460,
     "artHeight": 389,
     "failures": []
   },
   {
-    "name": "og-half_vertical-returning-arcade-en-no",
+    "name": "og-half_vertical-penrose-triangle-en-no",
     "width": 385,
     "height": 460,
     "artHeight": 408,
     "failures": []
   },
   {
-    "name": "og-half_vertical-returning-arcade-de-yes",
+    "name": "og-half_vertical-penrose-triangle-de-yes",
     "width": 385,
     "height": 460,
     "artHeight": 389,
     "failures": []
   },
   {
-    "name": "og-half_vertical-returning-arcade-de-no",
+    "name": "og-half_vertical-penrose-triangle-de-no",
     "width": 385,
     "height": 460,
     "artHeight": 408,
     "failures": []
   },
   {
-    "name": "og-quadrant-returning-arcade-en-yes",
+    "name": "og-quadrant-penrose-triangle-en-yes",
     "width": 385,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "og-quadrant-returning-arcade-en-no",
+    "name": "og-quadrant-penrose-triangle-en-no",
     "width": 385,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "og-quadrant-returning-arcade-de-yes",
+    "name": "og-quadrant-penrose-triangle-de-yes",
     "width": 385,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "og-quadrant-returning-arcade-de-no",
+    "name": "og-quadrant-penrose-triangle-de-no",
     "width": 385,
     "height": 225,
     "artHeight": 173,
     "failures": []
   },
   {
-    "name": "x-full-returning-arcade-en-yes",
+    "name": "x-full-penrose-triangle-en-yes",
     "width": 1836,
     "height": 1368,
     "artHeight": 1238.2874755859375,
     "failures": []
   },
   {
-    "name": "x-full-returning-arcade-en-no",
+    "name": "x-full-penrose-triangle-en-no",
     "width": 1836,
     "height": 1368,
     "artHeight": 1278.9561767578125,
     "failures": []
   },
   {
-    "name": "x-full-returning-arcade-de-yes",
+    "name": "x-full-penrose-triangle-de-yes",
     "width": 1836,
     "height": 1368,
     "artHeight": 1238.2874755859375,
     "failures": []
   },
   {
-    "name": "x-full-returning-arcade-de-no",
+    "name": "x-full-penrose-triangle-de-no",
     "width": 1836,
     "height": 1368,
     "artHeight": 1278.9561767578125,
     "failures": []
   },
   {
-    "name": "x-half_horizontal-returning-arcade-en-yes",
+    "name": "x-half_horizontal-penrose-triangle-en-yes",
     "width": 1836,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-half_horizontal-returning-arcade-en-no",
+    "name": "x-half_horizontal-penrose-triangle-en-no",
     "width": 1836,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-half_horizontal-returning-arcade-de-yes",
+    "name": "x-half_horizontal-penrose-triangle-de-yes",
     "width": 1836,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-half_horizontal-returning-arcade-de-no",
+    "name": "x-half_horizontal-penrose-triangle-de-no",
     "width": 1836,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-half_vertical-returning-arcade-en-yes",
+    "name": "x-half_vertical-penrose-triangle-en-yes",
     "width": 909,
     "height": 1368,
     "artHeight": 1233.731201171875,
     "failures": []
   },
   {
-    "name": "x-half_vertical-returning-arcade-en-no",
+    "name": "x-half_vertical-penrose-triangle-en-no",
     "width": 909,
     "height": 1368,
     "artHeight": 1274.4000244140625,
     "failures": []
   },
   {
-    "name": "x-half_vertical-returning-arcade-de-yes",
+    "name": "x-half_vertical-penrose-triangle-de-yes",
     "width": 909,
     "height": 1368,
     "artHeight": 1233.731201171875,
     "failures": []
   },
   {
-    "name": "x-half_vertical-returning-arcade-de-no",
+    "name": "x-half_vertical-penrose-triangle-de-no",
     "width": 909,
     "height": 1368,
     "artHeight": 1274.4000244140625,
     "failures": []
   },
   {
-    "name": "x-quadrant-returning-arcade-en-yes",
+    "name": "x-quadrant-penrose-triangle-en-yes",
     "width": 909,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-quadrant-returning-arcade-en-no",
+    "name": "x-quadrant-penrose-triangle-en-no",
     "width": 909,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-quadrant-returning-arcade-de-yes",
+    "name": "x-quadrant-penrose-triangle-de-yes",
     "width": 909,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-quadrant-returning-arcade-de-no",
+    "name": "x-quadrant-penrose-triangle-de-no",
     "width": 909,
     "height": 675,
     "artHeight": 581.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-full-returning-arcade-en-yes",
+    "name": "x-portrait-full-penrose-triangle-en-yes",
     "width": 1368,
     "height": 1836,
     "artHeight": 1706.0343017578125,
     "failures": []
   },
   {
-    "name": "x-portrait-full-returning-arcade-en-no",
+    "name": "x-portrait-full-penrose-triangle-en-no",
     "width": 1368,
     "height": 1836,
     "artHeight": 1746.703125,
     "failures": []
   },
   {
-    "name": "x-portrait-full-returning-arcade-de-yes",
+    "name": "x-portrait-full-penrose-triangle-de-yes",
     "width": 1368,
     "height": 1836,
     "artHeight": 1706.0343017578125,
     "failures": []
   },
   {
-    "name": "x-portrait-full-returning-arcade-de-no",
+    "name": "x-portrait-full-penrose-triangle-de-no",
     "width": 1368,
     "height": 1836,
     "artHeight": 1746.703125,
     "failures": []
   },
   {
-    "name": "x-portrait-half_horizontal-returning-arcade-en-yes",
+    "name": "x-portrait-half_horizontal-penrose-triangle-en-yes",
     "width": 1368,
     "height": 909,
     "artHeight": 815.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-half_horizontal-returning-arcade-en-no",
+    "name": "x-portrait-half_horizontal-penrose-triangle-en-no",
     "width": 1368,
     "height": 909,
     "artHeight": 815.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-half_horizontal-returning-arcade-de-yes",
+    "name": "x-portrait-half_horizontal-penrose-triangle-de-yes",
     "width": 1368,
     "height": 909,
     "artHeight": 815.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-half_horizontal-returning-arcade-de-no",
+    "name": "x-portrait-half_horizontal-penrose-triangle-de-no",
     "width": 1368,
     "height": 909,
     "artHeight": 815.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-half_vertical-returning-arcade-en-yes",
+    "name": "x-portrait-half_vertical-penrose-triangle-en-yes",
     "width": 675,
     "height": 1836,
     "artHeight": 1701.731201171875,
     "failures": []
   },
   {
-    "name": "x-portrait-half_vertical-returning-arcade-en-no",
+    "name": "x-portrait-half_vertical-penrose-triangle-en-no",
     "width": 675,
     "height": 1836,
     "artHeight": 1742.39990234375,
     "failures": []
   },
   {
-    "name": "x-portrait-half_vertical-returning-arcade-de-yes",
+    "name": "x-portrait-half_vertical-penrose-triangle-de-yes",
     "width": 675,
     "height": 1836,
-    "artHeight": 1673.6624755859375,
+    "artHeight": 1701.731201171875,
     "failures": []
   },
   {
-    "name": "x-portrait-half_vertical-returning-arcade-de-no",
+    "name": "x-portrait-half_vertical-penrose-triangle-de-no",
     "width": 675,
     "height": 1836,
     "artHeight": 1742.39990234375,
     "failures": []
   },
   {
-    "name": "x-portrait-quadrant-returning-arcade-en-yes",
+    "name": "x-portrait-quadrant-penrose-triangle-en-yes",
     "width": 675,
     "height": 909,
     "artHeight": 815.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-quadrant-returning-arcade-en-no",
+    "name": "x-portrait-quadrant-penrose-triangle-en-no",
     "width": 675,
     "height": 909,
     "artHeight": 815.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-quadrant-returning-arcade-de-yes",
+    "name": "x-portrait-quadrant-penrose-triangle-de-yes",
     "width": 675,
     "height": 909,
     "artHeight": 815.3999633789062,
     "failures": []
   },
   {
-    "name": "x-portrait-quadrant-returning-arcade-de-no",
+    "name": "x-portrait-quadrant-penrose-triangle-de-no",
     "width": 675,
     "height": 909,
     "artHeight": 815.3999633789062,
