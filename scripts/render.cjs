@@ -32,7 +32,7 @@ async function main(){
   const browser=await chromium.launch({headless:true,args:['--no-sandbox','--single-process','--no-zygote']});
   const page=await browser.newPage({viewport:{width:2000,height:1600}});
   const report=[];
-  for(const profile of profiles)for(const layout of layouts)for(const entry of CATALOGUE)for(const language of ['en','de'])for(const note of ['yes','no']){
+  for(const profile of profiles)for(const layout of layouts)for(const entry of CATALOGUE.filter(x=>!process.env.ARTWORK_ID||x.id===process.env.ARTWORK_ID))for(const language of ['en','de'])for(const note of ['yes','no']){
     const trmnl={plugin_settings:{custom_fields_values:{rotation:'fixed',artwork:entry.id,language,show_explanation:note}}};
     const vars={...run({trmnl}),trmnl};
     const markup=await engine.parseAndRender(read('shared.liquid')+read(layout+'.liquid'),vars);

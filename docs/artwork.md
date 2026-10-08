@@ -16,7 +16,7 @@ Superseded generated architectural studies are retained in Git history, not in t
 
 ## Impossible Cube
 
-An independently constructed outlined cube with contradictory over/under order: a rear upright crosses in front of the near top edge. Source: `scripts/build-art.cjs`; output: `assets/artwork/impossible-cube.svg`.
+An independently constructed solid-frame cube with contradictory over/under order: the rear upright crosses over the near top edge, while the near right post hides the rear bottom edge. The front is black, the top white and the side hatching is clipped to the face polygons. Source: `scripts/build-art.cjs`; output: `assets/artwork/impossible-cube.svg`.
 
 ## Impossible Trident
 

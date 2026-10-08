@@ -41,18 +41,26 @@ const catalogue=JSON.parse(fs.readFileSync(path.join(root,'data/artworks.json'),
 function wrap(body,label,viewBox='0 0 600 540') {return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${label}">${body}</svg>\n`;}
 function polygon(p,fill) {return `<polygon points="${points(p)}" fill="${fill}" stroke="#000" stroke-width="3" stroke-linejoin="round"/>`;}
 function impossibleCube(label) {
-  // Two equal square frames offset in projection. The rear upright deliberately
-  // crosses OVER the near top rail; the near right upright crosses over the rear
-  // bottom rail. These opposing occlusions prevent a consistent depth ordering.
-  const beam=d=>`<path d="${d}" fill="none" stroke="#000" stroke-width="25" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="17" stroke-linejoin="round"/>`;
-  let body=beam('M260 60H500V300H260Z')+beam('M100 180H340V420H100Z');
-  for(const d of ['M100 180L260 60','M340 180L500 60','M340 420L500 300','M100 420L260 300'])body+=beam(d);
-  // White clearance masks isolate the front/back reversal at the two crossings.
-  body+='<path d="M260 145V215 M340 268V332" fill="none" stroke="#fff" stroke-width="35"/>';
-  body+=beam('M260 144V216')+beam('M340 267V333');
-  body+='<path d="M260 140V220 M340 263V337" fill="none" stroke="#fff" stroke-width="17"/>';
-  return wrap(body,label,'55 20 490 440');
+  // Front and rear square frames share four exact diagonal depth rails. The
+  // rear-left upright crosses over the near top edge, while the near-right
+  // upright hides the rear bottom edge: an impossible ordering of depth.
+  const surface=(coords,hatched=false)=>polygon(coords,'#fff')+(hatched?`<path d="${hatch(coords,13)}" fill="none" stroke="#000" stroke-width="2"/>`:'');
+  let body='<path d="M240 65H500V325H240Z M270 95V295H470V95Z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="3"/>';
+  const rearRight=[[470,65],[500,65],[500,325],[470,325]];
+  body+=surface(rearRight,true);
+  for(const [index,coords] of [
+    [[103,176],[240,65],[270,65],[133,176]],
+    [[327,176],[470,65],[500,65],[357,176]],
+    [[103,424],[240,325],[270,325],[133,424]],
+    [[327,424],[470,325],[500,325],[357,424]]
+  ].entries())body+=surface(coords,index===1||index===3);
+  body+='<path d="M100 170H360V430H100Z M130 200V400H330V200Z" fill="#000" fill-rule="evenodd"/>';
+  body+='<rect x="240" y="65" width="30" height="260" fill="#000"/>';
+  const leftFacet=[[270,65],[288,65],[288,325],[270,325]];
+  body+=surface(leftFacet,true);
+  return wrap(body,label,'55 20 490 450');
 }
+
 function trident(label) {
   // Public-domain Poiuyt construction by AnonMoos, simplified and reoriented.
   const ends=[60,140,220].map(y=>`<ellipse transform="translate(34 ${y}) rotate(66.219865)" rx="21.28008" ry="11.3" fill="#000"/>`).join('');
