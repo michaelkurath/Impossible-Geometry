@@ -36,7 +36,33 @@ custom_fields:
   name: About Impossible Geometry
   field_type: author_bio
   category: art
-  description: A precise Penrose triangle with black, white and hatched faces. Embedded vector artwork; no external API or image hosting required.
+  description: Four geometric illusions with bold black, white and hatched faces. Embedded vector artwork; no external API or image hosting required.
+- keyname: rotation
+  name: Artwork rotation
+  field_type: select
+  options:
+  - Daily: daily
+  - Every hour: hourly
+  - Fixed artwork: fixed
+  default: daily
+  description: Daily follows your time zone. Hourly advances in UTC-aligned hours. All users in the same time slot see the same artwork.
+- keyname: artwork
+  name: Fixed artwork
+  field_type: select
+  options:
+  - Penrose Triangle: penrose-triangle
+  - Impossible Cube: impossible-cube
+  - Impossible Trident: impossible-trident
+  - Reversible Cubes: reversible-cubes
+  default: penrose-triangle
+  optional: true
+  description: Used when Artwork rotation is Fixed artwork.
+- keyname: time_zone
+  name: Daily rotation time zone
+  field_type: time_zone
+  default: Europe/Zurich
+  optional: true
+  description: Artwork changes at local midnight on the next refresh.
 - keyname: show_explanation
   name: Show explanation
   field_type: select
