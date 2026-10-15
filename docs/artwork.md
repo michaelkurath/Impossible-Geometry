@@ -64,7 +64,7 @@ Concept reference: Eric Weisstein / Margherita Barile, *Impossible Joinery*, Mat
 
 ## Block Triangle
 
-Nine separately drawn cubes suggest a triangular loop. Cube faces and centres are derived from an exact 60-degree lattice, with equal cube sizes and regular gaps along each flight. White tops, hatched left faces and black right faces retain the collection's visual language. Output: `assets/artwork/block-triangle.svg`.
+Nine separately drawn cubes form a triangular outline. This configuration does **not** contain a proven depth contradiction: nine normally projected cubes could be placed this way in space. It is retained as a geometric study, not classified as an impossible solid. Cube faces and centres are derived from an exact 60-degree lattice, with equal cube sizes and regular gaps along each flight. White tops, hatched left faces and black right faces retain the collection's visual language. Output: `assets/artwork/block-triangle.svg`.
 
 Concept reference: Cameron Browne, *Impossible Fractals*, section 6, Figure 9, discusses the subcube form of the tribar and its relationship to Reutersvaerd's early impossible figures: https://im-possible.info/english/articles/cameron-browne-2007/6-cubes.html . This is a newly constructed geometric diagram, not a reproduction of an artist's illustration.
 
