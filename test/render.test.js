@@ -57,3 +57,11 @@ test('invalid artwork and missing transform output retain visible fallback',asyn
  const html=await new Liquid().parseAndRender(shared+fs.readFileSync('src/full.liquid','utf8'),{selected_entry:{id:'missing'}});
  assert.match(html,/Penrose Triangle/); assert.match(html,/<svg /);
 });
+
+test('block triangle is not misrepresented as an impossible solid',()=>{
+ const blocks=CATALOGUE.find(x=>x.id==='block-triangle');
+ assert.ok(blocks);
+ assert.equal(blocks.kind,'geometric pattern');
+ assert.match(blocks.note,/possible in space/);
+ assert.match(blocks.note_de,/räumlich möglich/);
+});
