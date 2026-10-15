@@ -16,7 +16,7 @@ Superseded generated architectural studies are retained in Git history, not in t
 
 ## Impossible Cube
 
-A flat-faced cube assembled from white top, hatched frontal and black lateral regions. The recessed rear upright crosses the near top edge, reversing the expected order of depth. The rear-left junction uses three clean, shared face boundaries. Source: `scripts/build-art.cjs`; output: `assets/artwork/impossible-cube.svg`.
+A flat-faced cube assembled from white top, hatched frontal and black lateral regions. The recessed rear upright crosses the near top edge, reversing the expected order of depth. The front perimeter and one upper rail originally contained self-touching SVG polygons; their meeting points are now split into simple closed regions before fill and hatching. Two zero-length edges produced by vertex snapping are also discarded. The geometry keeps the intended point contacts and uses 7-unit hatch spacing (instead of 5) for clearer 1-bit reproduction. This corrects topology, but does not guarantee every optical junction is perceptually perfect. Source: `scripts/build-art.cjs`; output: `assets/artwork/impossible-cube.svg`.
 
 ## Impossible Trident
 

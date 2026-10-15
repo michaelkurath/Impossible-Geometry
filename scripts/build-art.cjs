@@ -73,16 +73,35 @@ for(const regions of Object.values(cubeRegions))for(const face of regions)for(le
   const match=cubeJunctions.find(([,aliases])=>aliases.some(p=>p[0]===face[i][0]&&p[1]===face[i][1]));
   if(match)face[i]=match[0];
 }
+// Convert a touching/non-simple contour into independent, non-overlapping
+// planar polygons before filling or hatching. Original artist control points
+// are kept: this removes only consecutive zero-length edges and splits at
+// a repeated junction where two lobes meet at exactly one vertex.
+function cubeContours(face) {
+  const clean=face.filter((p,i)=>i===0||p[0]!==face[i-1][0]||p[1]!==face[i-1][1]);
+  if(clean.length>1&&clean[0][0]===clean.at(-1)[0]&&clean[0][1]===clean.at(-1)[1])clean.pop();
+  const seen=new Map();
+  for(let i=0;i<clean.length;i++){
+    const key=clean[i].join(',');
+    if(seen.has(key)){
+      const first=seen.get(key);
+      return [clean.slice(0,first+1).concat(clean.slice(i+1)),clean.slice(first,i)];
+    }
+    seen.set(key,i);
+  }
+  return [clean];
+}
 function impossibleCube(label) {
-  // Face boundaries follow one consistent three-beam junction. The diagonal
-  // rail terminates at the left side of the recessed rear upright.
-  const fill=(p,color)=>`<polygon points="${points(p)}" fill="${color}" stroke="#000" stroke-width="1.1" stroke-linejoin="round"/>`;
-  const shaded=p=>fill(p,'#fff')+`<path d="${hatch(p,5)}" fill="none" stroke="#000" stroke-width="0.7"/>`;
+  // Every filled face now has a simple boundary: the upper front ear and
+  // lower bridge meet only at a point, as do two small upper-lip patches.
+  // Slightly wider hatch spacing improves readability on 1-bit e-paper.
+  const face=(p,color)=>cubeContours(p).map(q=>`<polygon points="${points(q)}" fill="${color}" stroke="#000" stroke-width="1.1" stroke-linejoin="round"/>`).join('');
+  const shaded=p=>cubeContours(p).map(q=>`<polygon points="${points(q)}" fill="#fff" stroke="#000" stroke-width="1.1" stroke-linejoin="round"/><path d="${hatch(q,7)}" fill="none" stroke="#000" stroke-width="0.8"/>`).join('');
   const [front,hole,...islands]=cubeRegions.front;
-  let body=shaded(front)+fill(hole,'#fff');
+  let body=shaded(front)+face(hole,'#fff');
   body+=islands.map(shaded).join('');
-  body+=cubeRegions.side.map(p=>fill(p,'#000')).join('');
-  body+=cubeRegions.top.map(p=>fill(p,'#fff')).join('');
+  body+=cubeRegions.side.map(p=>face(p,'#000')).join('');
+  body+=cubeRegions.top.map(p=>face(p,'#fff')).join('');
   return wrap(body,label,'-13 -10 226 230');
 }
 
@@ -286,4 +305,4 @@ function build(check=false){
   write(transformPath,transform);
 }
 if(require.main===module)build(process.argv.includes('--check'));
-module.exports={faces,hatch,svg,build,catalogue};
+module.exports={faces,hatch,svg,build,catalogue,cubeContours,cubeRegions};
