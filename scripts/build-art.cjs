@@ -174,9 +174,9 @@ function penroseStaircase(label) {
 }
 
 function impossibleColonnade(label) {
-  // A regular six-pillar frame with one contradictory crossing. The middle
-  // rear pillar passes in front of the upper near rail, but terminates on
-  // the rear lower rail. Each joint is drawn as an ordinary square beam.
+  // A five-pillar frame with one anomalous depth crossing. Removing the
+  // conventional front-centre pillar isolates the rear-centre upright: it
+  // comes forward across the near top rail while rooted at the rear base.
   const project=([x,y,z])=>[160+47.5*x-50*y,430-12.5*x-12.5*y-50*z];
   const box=([x,y,z],[dx,dy,dz])=>{
     const p=(a,b,c)=>project([a,b,c]);
@@ -192,7 +192,7 @@ function impossibleColonnade(label) {
   let body=long(2,-.32)+short(8,-.32)+short(0,-.32);
   body+=post(8,2)+post(0,2);
   body+=long(2,5)+short(8,5)+short(0,5);
-  body+=long(0,-.32)+post(8,0)+post(4,0)+post(0,0);
+  body+=long(0,-.32)+post(8,0)+post(0,0);
   body+=long(0,5);
   // Deliberate depth reversal, not a disconnected or floating beam.
   body+=post(4,2);
