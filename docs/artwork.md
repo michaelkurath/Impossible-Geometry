@@ -46,7 +46,7 @@ Concept reference: Cameron Browne, *Impossible Fractals*, section 5, describes t
 
 ## Impossible Colonnade
 
-An independently projected six-pillar frame. All ordinary rails and posts use the same square-section box projection. The centre rear pillar deliberately occludes the upper near rail, while its lower end remains attached to the rear lower rail. That contradictory ordering is the illusion; the upright stays continuous and its ends have ordinary beam junctions. The construction uses explicit face polygons and hatch segments, without masks or global SVG IDs.
+An independently projected five-pillar frame. All ordinary rails and posts use the same square-section box projection. The isolated centre rear pillar deliberately occludes the upper near rail, while its lower end remains attached to the rear lower rail. The former conventional front-centre post was removed to reduce visual noise. That contradictory ordering is the illusion; the upright stays continuous and its ends have ordinary beam junctions. The construction uses explicit face polygons and hatch segments, without masks or global SVG IDs.
 
 Concept reference: Diego Uribe, *A Set of Impossible Tiles*, sections “Crossing bars” and “Escher's Belvedere structure”: https://im-possible.info/english/articles/tiles/tiles.html . This asset is a new sparse frame, with no palace, figures or other elements from an Escher composition. Output: `assets/artwork/impossible-colonnade.svg`.
 
