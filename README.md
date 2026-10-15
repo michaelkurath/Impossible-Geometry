@@ -37,12 +37,13 @@ npm run build:art
 npm run check:art
 npm test
 npm run render
+npm run check:previews
 # Optional, with trmnlp installed:
 trmnlp serve
 ```
 
 `scripts/build-art.cjs` defines the geometry once and produces the standalone SVGs and generated blocks in `src/shared.liquid`. Edit the generator rather than either output. The catalogue lives in `data/artworks.json`; the build embeds it into the transform. The triangle follows an exact 60-degree lattice. Hatch segments are intersected with the shaded face; no pattern IDs can clash across plugin instances.
 
-The fallback renderer uses LiquidJS, Chromium and TRMNL Framework 3.3.1. It checks all four layouts on OG, X landscape and X portrait, both languages, and both caption settings. It validates bounds, footer text overflow and embedded artwork. It does not reproduce physical e-paper rasterization.
+The fallback renderer uses LiquidJS, Chromium and TRMNL Framework 3.3.1. It checks all four layouts on OG, X landscape and X portrait, both languages, and both caption settings. It validates bounds, footer text overflow and embedded artwork. It does not reproduce physical e-paper rasterization. GitHub Actions repeats the vector consistency, unit and 624-layout rendering checks on each pull request, then audits the screenshot matrix and uploads a selection of previews for review.
 
 [Artwork ratings and review](docs/artwork-review.md) · [Artwork and source credit](docs/artwork.md) · [Validation](docs/validation.md) · [SVG](assets/artwork/penrose-triangle.svg)
