@@ -92,9 +92,9 @@ const CATALOGUE = [
     "id": "block-triangle",
     "title": "Block Triangle",
     "title_de": "Würfel-Dreieck",
-    "note": "Nine separate cubes suggest a loop that cannot close in space.",
-    "note_de": "Neun einzelne Würfel bilden eine Schleife, die sich im Raum nicht schliessen kann.",
-    "kind": "impossible object"
+    "note": "Nine equal cubes trace a triangle. This pattern is possible in space.",
+    "note_de": "Neun gleiche Würfel zeichnen ein Dreieck. Die Anordnung ist räumlich möglich.",
+    "kind": "geometric pattern"
   },
   {
     "id": "impossible-hexnut",
