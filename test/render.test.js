@@ -5,7 +5,7 @@ const fs=require('node:fs');
 const {select,CATALOGUE,localDay}=require('../src/transform');
 const epoch=new Date('2026-10-08T12:00:00Z');
 const inputFor=fields=>({trmnl:{plugin_settings:{custom_fields_values:fields}}});
-const {build}=require('../scripts/build-art.cjs');
+const {build,cubeContours,cubeRegions}=require('../scripts/build-art.cjs');
 const shared=fs.readFileSync('src/shared.liquid','utf8');
 for(const input of [undefined,null,{}, {trmnl:{plugin_settings:{custom_fields_values:{language:' DE ',show_explanation:'YES'}}}}]) {
  test(`safe rendering ${JSON.stringify(input)}`,async()=>{
@@ -64,4 +64,35 @@ test('block triangle is not misrepresented as an impossible solid',()=>{
  assert.equal(blocks.kind,'geometric pattern');
  assert.match(blocks.note,/possible in space/);
  assert.match(blocks.note_de,/räumlich möglich/);
+});
+
+test('cube contours are simple closed faces with no zero-length edges',()=>{
+  const cross=(a,b,c)=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
+  const same=(a,b)=>a[0]===b[0]&&a[1]===b[1];
+  const segmentsIntersect=(a,b,c,d)=>{
+    const v=[cross(a,b,c),cross(a,b,d),cross(c,d,a),cross(c,d,b)];
+    // Reject non-adjacent proper crossings. Collinear overlaps are rejected
+    // separately by uniqueness of vertices and non-zero edge lengths.
+    return v[0]*v[1]<0 && v[2]*v[3]<0;
+  };
+  assert.equal(cubeContours(cubeRegions.front[0]).length,2);
+  assert.equal(cubeContours(cubeRegions.top[1]).length,2);
+  let count=0;
+  for(const kind of ['front','side','top'])for(const raw of cubeRegions[kind]){
+    for(const polygon of cubeContours(raw)){
+      count++;
+      assert.ok(polygon.length>=3);
+      const uniq=new Set(polygon.map(p=>p.join(',')));
+      assert.equal(uniq.size,polygon.length,'repeated vertex after normalization');
+      for(let i=0;i<polygon.length;i++){
+        const a=polygon[i],b=polygon[(i+1)%polygon.length];
+        assert.ok(!same(a,b),'zero-length segment');
+        for(let j=i+1;j<polygon.length;j++){
+          if(j===i+1||(i===0&&j===polygon.length-1))continue;
+          assert.ok(!segmentsIntersect(a,b,polygon[j],polygon[(j+1)%polygon.length]),'self-crossing face');
+        }
+      }
+    }
+  }
+  assert.equal(count,16,'unexpected number of split cube surfaces');
 });
