@@ -5,7 +5,7 @@ Scores are visual judgments out of 10, combining local geometric consistency, st
 | Artwork | Before | After | Assessment / action |
 | --- | ---: | ---: | --- |
 | Penrose Triangle | 9 | 9 | Strong silhouette, coherent three-face cycle. Retained. |
-| Impossible Cube | 5.5 | 6.5 | Aligned shared vertices at several junctions to reduce slivers and discontinuities. Its dense corner construction remains a weakness; not rated as fully resolved. |
+| Impossible Cube | 5.5 | 7 | Fixed two non-simple polygon contours at their point-contact vertices, removed zero-length edges after snapping, and opened the hatching to 7 units. The crowded central visual junction remains unresolved. |
 | Impossible Trident | 8 | 8 | Standard three-prong/two-arm contradiction, readable open linework. Retained. |
 | Reversible Cubes | 8.5 | 8.5 | Regular lozenge lattice and consistent face treatment. Retained. |
 | Kanizsa Triangle | 6 | 8.5 | Corrected centre spacing to an exact equilateral triangle; enlarged inducers to strengthen the implied edges. |
@@ -20,7 +20,7 @@ Scores are visual judgments out of 10, combining local geometric consistency, st
 
 ## Changes and limits
 
-The cube correction is deliberately limited to shared endpoints. An exploratory regular box-frame reconstruction weakened the illusion and was discarded before publication. The existing composition is retained; the review does not claim every perceptual issue is solved.
+The cube now keeps its original composition while splitting the self-touching front loop and the bridge loop into simple planar faces. Existing shared endpoints remain in place. An exploratory regular box-frame reconstruction weakened the illusion and was discarded before publication. The update does not claim that the central optical junction is fully resolved.
 
 The Kanizsa centres are `(300,90)`, `(100,90+200√3)` and `(500,90+200√3)`. All sides are 400 units. Each opening is 60 degrees and points along the two incident triangle edges.
 
