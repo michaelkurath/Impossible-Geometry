@@ -22,8 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-      - run: npm ci
+      # The project currently has no package-lock.json. Versions are pinned in package.json.
+      - run: npm install --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
       - name: Verify generated sources
         run: npm run check:art
