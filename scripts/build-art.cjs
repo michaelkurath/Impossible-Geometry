@@ -13,14 +13,14 @@ const n = value => Number(value.toFixed(3));
 const points = polygon => polygon.map(p=>p.map(n).join(',')).join(' ');
 // Intersect parallel hatch lines with the concave face. Explicit segments avoid
 // global SVG pattern/clip IDs when the plugin occurs several times in a mashup.
-function hatch(polygon, pitch=16) {
+function hatch(polygon, pitch=16, direction=1) {
   const segments=[];
-  const offsets=polygon.map(([x,y])=>x+y);
+  const offsets=polygon.map(([x,y])=>x+direction*y);
   for(let c=Math.ceil(Math.min(...offsets)/pitch)*pitch; c<Math.max(...offsets); c+=pitch){
     const intersections=[];
     for(let i=0;i<polygon.length;i++){
       const a=polygon[i],b=polygon[(i+1)%polygon.length];
-      const av=a[0]+a[1],bv=b[0]+b[1];
+      const av=a[0]+direction*a[1],bv=b[0]+direction*b[1];
       if((av<=c&&bv>c)||(bv<=c&&av>c)){
         const t=(c-av)/(bv-av);
         intersections.push([a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])]);
@@ -62,6 +62,17 @@ const cubeRegions={
     [[26,149],[72,126],[86,129],[28,159],[26,159]],
   ],
 };
+// Shared junctions use one coordinate, avoiding tiny gaps and dark slivers.
+const cubeJunctions=[
+  [[4,42],[[3,43]]],[[74,59],[[74,60]]],[[86,11],[[86,12],[87,12]]],
+  [[87,27],[[87,28]]],[[197,30],[[197,32]]],[[118,70],[[117,70]]],
+  [[118,203],[[117,204],[120,203]]],[[17,163],[[17,164],[18,163],[19,163]]],
+  [[104,185],[[103,185]]],[[175,150],[[174,151],[175,150],[174,150]]],
+];
+for(const regions of Object.values(cubeRegions))for(const face of regions)for(let i=0;i<face.length;i++){
+  const match=cubeJunctions.find(([,aliases])=>aliases.some(p=>p[0]===face[i][0]&&p[1]===face[i][1]));
+  if(match)face[i]=match[0];
+}
 function impossibleCube(label) {
   // Face boundaries follow one consistent three-beam junction. The diagonal
   // rail terminates at the left side of the recessed rear upright.
@@ -95,13 +106,13 @@ function cubes(label) {
   return wrap(body,label,'75 50 450 440');
 }
 function kanizsaTriangle(label) {
-  const pacman=(cx,cy,direction,r=68)=>{
+  const pacman=(cx,cy,direction,r=90)=>{
     const start=(direction+30)*Math.PI/180,end=(direction-30)*Math.PI/180;
     const at=a=>[n(cx+r*Math.cos(a)),n(cy+r*Math.sin(a))];
     return `<path d="M${cx} ${cy}L${at(start).join(' ')}A${r} ${r} 0 1 1 ${at(end).join(' ')}Z" fill="#000"/>`;
   };
-  const body=pacman(300,86,90)+pacman(95,424,-30)+pacman(505,424,210);
-  return wrap(body,label,'15 0 570 510');
+  const body=pacman(300,90,90)+pacman(100,90+200*Math.sqrt(3),-30)+pacman(500,90+200*Math.sqrt(3),210);
+  return wrap(body,label,'0 -10 600 550');
 }
 function neckerCube(label) {
   const f=[[90,155],[350,155],[350,415],[90,415]],rear=f.map(([x,y])=>[x+150,y-105]);
@@ -113,24 +124,18 @@ function neckerCube(label) {
   return wrap(body,label,'50 20 510 445');
 }
 function reversibleSteps(label) {
-  const stepWidth=78,depth=[38,-27],rise=48;
-  let body='';
-  for(let i=0;i<5;i++){
-    const x=70+i*stepWidth,y=365-i*rise;
-    const left=[x,y],right=[x+stepWidth,y+14];
-    const backRight=[right[0]+depth[0],right[1]+depth[1]],backLeft=[left[0]+depth[0],left[1]+depth[1]];
-    const tread=[left,right,backRight,backLeft];
-    body+=polygon(tread,'#fff');
-    if(i%2===0)body+=`<path d="${hatch(tread,14)}" fill="none" stroke="#000" stroke-width="2"/>`;
-    if(i<4){
-      const riser=[right,backRight,[backRight[0],backRight[1]-rise-14],[right[0],right[1]-rise-14]];
-      body+=polygon(riser,'#fff');
-    }
-  }
-  return wrap(body,label,'40 70 520 390');
+  // Schroeder staircase: two equal zigzags joined by parallel depth edges.
+  // Equal shading of the flanking walls allows either depth interpretation.
+  const edge=[[80,80]];
+  for(let i=0;i<5;i++){edge.push([80+60*(i+1),80+60*i]);edge.push([80+60*(i+1),80+60*(i+1)]);}
+  const back=edge.map(([x,y])=>[x+100,y-55]);
+  let body=shadedPolygon([...edge,[380,445],[80,445]],18,1.5);
+  body+=shadedPolygon([...back,[480,25]],18,1.5);
+  for(let i=0;i<edge.length-1;i++)body+=polygon([edge[i],edge[i+1],back[i+1],back[i]],'#fff');
+  return wrap(body,label,'45 0 470 475');
 }
-function shadedPolygon(p, pitch=14, width=2) {
-  return polygon(p,'#fff')+`<path d="${hatch(p,pitch)}" fill="none" stroke="#000" stroke-width="${width}"/>`;
+function shadedPolygon(p, pitch=14, width=2, direction=1) {
+  return polygon(p,'#fff')+`<path d="${hatch(p,pitch,direction)}" fill="none" stroke="#000" stroke-width="${width}"/>`;
 }
 function impossibleSquare(label) {
   // Sharp four-bar: the continuous front band changes depth at the inner
@@ -210,7 +215,7 @@ function impossibleJoinery(label) {
   const fallingFront=[[112,172],[112,196],[478,408],[478,384]];
   const fallingTop=[[112,172],[146,152],[512,364],[478,384]];
   let body=shadedPolygon(rightFront)+polygon(rightSide,'#000')+polygon(rightTop,'#fff');
-  body+=shadedPolygon(risingFront)+polygon(risingTop,'#fff')+polygon([[478,138],[512,118],[512,142],[478,162]],'#000');
+  body+=shadedPolygon(risingFront,14,2,-1)+polygon(risingTop,'#fff')+polygon([[478,138],[512,118],[512,142],[478,162]],'#000');
   body+=shadedPolygon(leftFront)+polygon(leftSide,'#000')+polygon(leftTop,'#fff');
   body+=shadedPolygon(fallingFront)+polygon(fallingTop,'#fff');
   body+=polygon([[478,384],[512,364],[512,388],[478,408]],'#000');
@@ -220,7 +225,7 @@ function impossibleJoinery(label) {
 function blockTriangle(label) {
   // Nine separate cubes: four vertices along each side, with corners shared.
   // A 60-degree lattice keeps every cube and every intervening gap regular.
-  const step=100,dy=step/Math.sqrt(3),r=43,q=r/Math.sqrt(3),height=2*q;
+  const step=100,dy=step/Math.sqrt(3),r=48,q=r/Math.sqrt(3),height=2*q;
   const apex=[390,80],left=[90,80+3*dy],bottom=[390,80+6*dy];
   const centres=[];
   for(const [a,b] of [[apex,left],[left,bottom],[bottom,apex]])

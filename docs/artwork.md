@@ -28,7 +28,7 @@ An independently constructed seven-cell lozenge pattern with white, hatched and 
 
 ## Kanizsa Triangle
 
-Three black disks with 60-degree openings suggest a bright triangle whose edges are absent. Constructed with circular arcs in `scripts/build-art.cjs`.
+Three black disks with 60-degree openings sit at the vertices of an exact equilateral triangle. Larger inducers strengthen the bright triangle whose edges are absent. Constructed with circular arcs in `scripts/build-art.cjs`.
 
 ## Necker Cube
 
@@ -36,7 +36,7 @@ Two offset square wireframes and four connecting edges form a reversible depth r
 
 ## Reversible Steps
 
-Five treads and their risers share matching endpoints. The linework allows the stair direction to flip when viewed upside down.
+A Schroeder-style construction uses two matching five-step profiles joined by parallel depth edges. Equally hatched flanking walls support either depth reading. Each step is 60 by 60 units; the second profile is translated by (100, -55).
 
 ## Impossible Square
 
@@ -73,3 +73,7 @@ Concept reference: Cameron Browne, *Impossible Fractals*, section 6, Figure 9, d
 A faceted outer outline and four independently defined cubic Bezier bore curves use the conventional ambihelical topology. The inner left return continues into the outer right face; opposite bore endpoints lead to different depth readings. The two aperture curves share exact endpoints, without a second loop or dangling seam. New proportions, curves and monochrome face treatment are defined in the generator. Output: `assets/artwork/impossible-hexnut.svg`.
 
 Concept reference: Eric Weisstein / Margherita Barile, *Ambihelical Hexnut*, MathWorld: https://mathworld.wolfram.com/AmbihelicalHexnut.html . The reference SVG is not imported or redistributed. No Escher composition is reproduced.
+
+## Catalogue review
+
+See [the 9 October review](artwork-review.md) for all thirteen ratings, corrections and remaining weaknesses.
