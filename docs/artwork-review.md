@@ -12,7 +12,7 @@ Scores are visual judgments out of 10, combining local geometric consistency, st
 | Necker Cube | 8.5 | 8.5 | Clear, consistent wireframe with two plausible depth readings. Retained. |
 | Reversible Steps | 4 | 8.5 | Rebuilt as a Schroeder-style stair with matching profiles, parallel depth edges and equally shaded flanking walls. Replaces the weak narrow zigzag. |
 | Impossible Square | 8 | 8 | Clear four-bar contradiction and continuous face bands. Retained. |
-| Impossible Colonnade | 6.5 | 6.5 | One deliberate depth-order contradiction; the crowded top frame still makes it less immediate at small sizes. Retained pending a stronger composition. |
+| Impossible Colonnade | 6.5 | 7 | Removed the redundant front-centre post to highlight the back/front reversal; still a subtle illusion at small sizes. |
 | Penrose Staircase | 8 | 8 | Recognizable closed ascending loop, shared tread endpoints. Retained. |
 | Impossible Joinery | 5.5 | 6.5 | Changed hatch direction on the ascending beam, removing long near-parallel stripes. Joint geometry retained; the paradox remains subtler than the strongest entries. |
 | Block Triangle | 6 | 8 | Enlarged equal cubes on the same lattice, reducing gaps and strengthening the implied closed loop. |
