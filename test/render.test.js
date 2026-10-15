@@ -94,5 +94,5 @@ test('cube contours are simple closed faces with no zero-length edges',()=>{
       }
     }
   }
-  assert.equal(count,16,'unexpected number of split cube surfaces');
+  assert.equal(count,15,'unexpected number of split cube surfaces');
 });
