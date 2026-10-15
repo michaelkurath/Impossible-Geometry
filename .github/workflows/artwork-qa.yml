@@ -31,6 +31,8 @@ jobs:
         run: npm test
       - name: Render all OG and TRMNL X variants
         run: npm run render
+      - name: Verify complete screenshot matrix
+        run: npm run check:previews
       - name: Upload render report and sample previews
         if: always()
         uses: actions/upload-artifact@v4
