@@ -6,7 +6,8 @@
     "test": "node --test test/*.test.js",
     "render": "node scripts/render.cjs",
     "build:art": "node scripts/build-art.cjs",
-    "check:art": "node scripts/build-art.cjs --check"
+    "check:art": "node scripts/build-art.cjs --check",
+    "check:previews": "node scripts/check-preview.cjs"
   },
   "devDependencies": {
     "liquidjs": "10.30.0",
